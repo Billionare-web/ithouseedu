@@ -24,7 +24,7 @@ function Footer() {
           <a href="#courses">Kurslar</a>
         </li>
         <li className="mt-2">
-          <a href="#4">Bitiruvchilar</a>
+          <a href="#3">Bitiruvchilar</a>
         </li>
         <li className="mt-2">
           <a href="#contact">Aloqa</a>
@@ -64,10 +64,10 @@ function Footer() {
           <Link href={"https://rustili.ithouseedu.uz/"}>Rus Tili</Link>
         </li>
         <li className="mt-2">
-          <Link href={""}>SMM</Link>
+          <Link href={"/smm"}>SMM</Link>
         </li>
         <li className="mt-2">
-          <Link href={""}>Matemetika</Link>
+          <Link href={"/math"}>Matemetika</Link>
         </li>
         <li className="mt-2">
           <Link href={"https://kiberxavfsizlik.ithouseedu.uz/"}>
@@ -75,7 +75,7 @@ function Footer() {
           </Link>
         </li>
         <li className="mt-2">
-          <Link href={""}>Interyer Dizayn</Link>
+          <Link href={"/interyer"}>Interyer Dizayn</Link>
         </li>
       </ul>
       <ul>
