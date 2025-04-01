@@ -294,8 +294,8 @@ function Page() {
                 className="bg-gray-200 rounded-3xl py-5 px-5 w-full"
               >
                 <h1 className="text-4xl font-bold text-center">15 000 000</h1>
-                <h1 className="text-center mx-[87px] mt-56 flex items-center gap-2">
-                  <span className="bg-white rounded-3xl px-3 py-2">Junior</span>
+                <h1 className="text-center mx-[86px] mt-56 flex items-center gap-2">
+                  <span className="bg-white rounded-3xl px-3 py-2">Senior</span>
                   3+ yil
                 </h1>
               </div>

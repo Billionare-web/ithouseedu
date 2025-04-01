@@ -33,7 +33,7 @@ function Footer() {
       <ul>
         <h1 className="text-2xl font-semibold">Yo'nalishlar</h1>
         <li className="mt-6">
-          <Link href={"https://foundation.ithouseedu.uz/"}>Foundation</Link>
+          <Link href={"/foundation"}>Foundation</Link>
         </li>
         <li className="mt-2">
           <Link href={"/kids"}>Foundation Kids</Link>

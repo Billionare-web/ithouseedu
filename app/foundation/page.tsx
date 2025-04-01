@@ -1,21 +1,21 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { FaCheck } from "react-icons/fa6";
-import SMM from "@/app/components/imgs/smm-3.png";
-import Social from "@/app/components/imgs/social.png";
-import Ism from "@/app/components/imgs/Ism.png";
+import Found from "@/app/components/imgs/Foundation-3.png";
+import MS from "@/app/components/imgs/ms.png";
+import Mahmudjon from "@/app/components/imgs/Mahmud.png";
 import Girl from "@/app/components/imgs/girl.png";
 import Boy from "@/app/components/imgs/Boy.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Women from "@/app/components/imgs/Women.png";
 import Bitir from "@/app/components/imgs/Bitir.png";
 import Logo from "@/app/components/imgs/logo.png";
-import Instagram from "@/app/components/imgs/Instagram.png";
-import Youtube from "@/app/components/imgs/Youtube.png";
-import TIkTok from "@/app/components/imgs/tiktok.png";
-import Telegram from "@/app/components/imgs/telegram.png";
+import Word from "@/app/components/imgs/word2.png";
+import Excel from "@/app/components/imgs/excel.png";
+import PowerPoint from "@/app/components/imgs/power.png";
+import Canva from "@/app/components/imgs/canva.png";
 import Footer from "../components/footer";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import Navbar from "../navbar";
@@ -53,31 +53,36 @@ function Page() {
         <div className="">
           <div className="flex pl-56 pr-24 justify-between bg-blue-50 pb-20 w-full h-wull">
             <div className="mt-36">
-              <h1 className="text-5xl font-bold">SMM</h1>
+              <h1 className="text-5xl font-bold">Foundation</h1>
+              <h1 className="text-4xl font-bold mt-5">(Kompyuter Savodxonligi)</h1>
               <h1 className="text-4xl mt-8 font-bold">kursi</h1>
               <h1 className="mt-16">
-                SMM (Social Media Marketing) menejerining asosiy vazifasi brend
-                yoki tashkilotning <br />
-                ijtimoiy tarmoqlardagi faoliyatini yuritish va
-                rivojlantirishdir. Quyidagi asosiy vazifalar <br />
-                SMM menejerga tegishli
+                Kompyuter savodxonligi – zamonaviy texnologiyalar bilan ishlash
+                ko‘nikmalarini o‘z <br />
+                ichiga oladi. Bu fan kompyuterning asosiy qismlari, operatsion
+                tizimlar, ofis <br />
+                dasturlari, internetdan foydalanish, ma’lumotlarni saqlash va
+                xavfsizlik choralari kabi <br />
+                mavzularni o‘rgatadi. Kompyuter savodxonligi har qanday sohada
+                ishlash uchun <br />
+                muhim bo‘lib, kundalik hayotda ham foydalidir.
               </h1>
               <div className="flex items-center gap-5 mt-14">
                 <h1 className="flex items-center gap-2">
-                  <Image className="w-9 h-9" src={Instagram} alt="" />
-                  Instagram
+                  <Image className="w-7 h-7" src={Word} alt="" />
+                  Word
                 </h1>
                 <h1 className="flex items-center gap-2">
-                  <Image className="w-9 h-9" src={Youtube} alt="" />
-                  Youtube
+                  <Image className="w-7 h-7" src={Excel} alt="" />
+                  Excel
                 </h1>
                 <h1 className="flex items-center gap-2">
-                  <Image className="w-9 h-9" src={TIkTok} alt="" />
-                  TikTok
+                  <Image className="w-7 h-7" src={PowerPoint} alt="" />
+                  PowerPoint
                 </h1>
                 <h1 className="flex items-center gap-2">
-                  <Image className="w-9 h-9" src={Telegram} alt="" />
-                  Telegram
+                  <Image className="w-7 h-7 rounded-sm" src={Canva} alt="" />
+                  Canva
                 </h1>
               </div>
               <h1 className="flex items-center gap-2 mt-8">
@@ -101,34 +106,33 @@ function Page() {
             <Image
               data-aos="zoom-in"
               data-aos-duration="1000"
+              data-aos-easing="ease-out"
               className="w-[500px] h-[500px] mt-20"
-              src={SMM}
-              alt=""
+              src={Found}
+              alt="Interior Design"
             />
           </div>
           <div className="pl-64 pr-24 mt-28">
-            <h1 className="text-4xl font-bold">SMM mutaxassisi nima qiladi?</h1>
+            <h1 className="text-4xl font-bold">
+              Kompyuter Savodxonligi nima qiladi?
+            </h1>
             <h1 className="text-xl font-semibold mt-20">
-              SMM mutaxassisi ijtimoiy tarmoqlarda brendni rivojlantirish va
-              marketing kampaniyalarini boshqarish bilan shug‘ullanadi.
+              Zamonaviy dunyoda kompyuter savodxonligi har bir inson uchun
+              zarur.
             </h1>
             <h1 className="text-xl font-semibold mt-8">
-              Kontent yaratish, auditoriyani jalb qilish, reklama
-              kampaniyalarini amalga oshirish, tahlil qilish va hisobotlar
-              <br />
-              tayyorlash – bularning barchasi SMM mutaxassislari tomonidan
-              amalga oshiriladi. Masalan, Facebook, <br />
-              Instagram, Twitter va boshqa ijtimoiy tarmoqlarda brendning
-              imijini yaratish, target reklama yaratish va <br />
-              foydalanuvchilar bilan muloqot qilish uchun turli vositalar va
-              texnikalardan foydalaniladi.
+              Elektron pochta, matn muharrirlari, internetda qidiruv, fayllarni
+              boshqarish, kiberxavfsizlik choralari, bulutli <br />
+              texnologiyalar va dasturiy ta’minotdan samarali foydalanish –
+              bularning barchasi kompyuter savodxonligi <br />
+              ko‘nikmalariga kiradi.
             </h1>
             <Image
               data-aos="zoom-in"
               data-aos-duration="1000"
-              className="rounded-2xl w-[1000px] mt-8"
-              src={Social}
-              alt=""
+              className="rounded-2xl max-w-full w-[1000px] my-8"
+              src={MS}
+              alt="Interior Image"
             />
           </div>
           <div id="1" className="mt-12 mb-12 bg-white w-full h-12"></div>
@@ -137,34 +141,31 @@ function Page() {
               Kasbda boshlash uchun kerak bo'lgan hamma <br />
               narsani o'rgatamiz
             </h1>
-            <div className="flex mt-12 justify-between">
+            <div className="flex mt-16 justify-between">
               <div data-aos="zoom-in" data-aos-duration="1000">
                 <h1 className="flex items-center gap-2 font-bold">
                   <IoIosCheckmarkCircle className="text-red-600 text-xl" />{" "}
-                  Kompozitsiya, algoritmlar va SMM asoslari{" "}
+                  Kompyuter savodxonligi asoslari
                 </h1>
                 <h1 className="ml-7 mt-3">
-                  Biz mashg‘ulotimizni ijtimoiy tarmoqlarda marketing <br />
-                  strategiyalari, kontent yaratish va auditoriya bilan <br />
-                  muloqot qilish asoslaridan boshlaymiz. Biz sizning <br />
-                  kreativ fikrlash qobiliyatingizni va SMM strategiyalarini
-                  <br />
-                  ishlab chiqish mahoratingizni oshirishga yordam <br />
-                  beramiz.
+                  Mashg‘ulotlarimizni kompyuter tizimlarining asoslari, <br />
+                  ma’lumotlar strukturalari, operatsion tizimlar va <br />
+                  algoritmlarni o‘rganishdan boshlaymiz. Sizning <br />
+                  mantiqiy fikrlash va texnik ko‘nikmalaringizni <br />
+                  rivojlantirishga yordam beramiz.
                 </h1>
               </div>
               <div data-aos="zoom-in" data-aos-duration="1000">
                 <h1 className="flex items-center gap-2 font-bold">
-                  <IoIosCheckmarkCircle className="text-red-600 text-xl" /> SMM
-                  vositalari va platformalar{" "}
+                  <IoIosCheckmarkCircle className="text-red-600 text-xl" />{" "}
+                  Dasturiy ta’minot bilan ishlash
                 </h1>
                 <h1 className="ml-7 mt-3">
-                  Biz SMM uchun asosiy platformalar va vositalarni <br />
-                  o‘rganamiz: Instagram, Facebook, Twitter, LinkedIn va <br />
-                  TikTok. Biz analitika vositalari, reklamalar yaratish, <br />
-                  kontent rejalashtirish va tahlil qilishni batafsil ko‘rib
-                  <br />
-                  chiqamiz.
+                  Asosiy dasturiy vositalarni o‘rganamiz: Windows va <br />
+                  Linux operatsion tizimlari, Microsoft Office, Google <br />
+                  Docs, internet xavfsizligi, fayl tizimlari va bulutli <br />
+                  texnologiyalar. Biz interfeys, dasturlar va ularning <br />
+                  imkoniyatlari bilan batafsil tanishamiz.
                 </h1>
               </div>
             </div>
@@ -175,10 +176,10 @@ function Page() {
                   Amaliy ko'nikmalar
                 </h1>
                 <h1 className="ml-7 mt-3">
-                  Siz kontent yaratishingiz, target reklamalar yaratish, <br />
-                  tahlil qilish va hisobotlar tayyorlash, brend <br />
-                  strategiyasini ishlab chiqish va amalga oshirishingiz <br />
-                  kerak.
+                  Siz elektron pochta bilan ishlash, hujjatlar yaratish, <br />
+                  ma’lumotlarni tartibga solish, tizimni optimallashtirish
+                  <br />
+                  va xavfsiz saqlash jarayonlarini o‘rganasiz.
                 </h1>
               </div>
               <div data-aos="zoom-in" data-aos-duration="1000">
@@ -187,82 +188,81 @@ function Page() {
                   Yumshoq ko'nikmalar va o'zini o'zi taqdim etish
                 </h1>
                 <h1 className="ml-7 mt-3">
-                  Kasbda muvaffaqiyat qozonish uchun SMM <br />
-                  mutaxassisi mijozlar bilan ishlash, auditoriyaga mos <br />
-                  kontent yaratish, tanqidlar bilan ishlay olish va <br />
-                  natijalarni aniq taqdim etish muhimdir.
+                  Muvaffaqiyatli bo‘lish uchun foydalanuvchi <br />
+                  texnologiyalarni tushunishi, muammolarni hal qila <br />
+                  olishi, samarali muloqot va kreativ yondashuvni <br />
+                  rivojlantirishi muhimdir.
                 </h1>
               </div>
             </div>
           </div>
-          <div id="mentor" className="mt-40 bg-blue-50 px-64 py-24">
+          <div id="mentor" className="mt-40 bg-blue-50 px-64 py-20">
             <h1 className="text-4xl font-bold">
-              Biz sizga matematikaning asosiy <br />
+              Biz sizga Kompyuter Savodxonligini asosiy <br />
               ko'nikmalarini o'rgatamiz
             </h1>
             <div className="flex gap-3 mt-8">
               <div
                 data-aos="zoom-in"
                 data-aos-duration="1000"
-                className="shadow-2xl w-96 rounded-2xl px-4 py-24 h-full"
+                className="shadow-2xl w-96 rounded-2xl px-4 py-[75px] h-full"
               >
                 <Image
                   className="rounded-full w-32 h-32 mx-auto"
-                  src={Ism}
+                  src={Mahmudjon}
                   alt=""
                 />
                 <h1 className="text-gray-400 text-center">Mentor</h1>
                 <h1 className="text-3xl font-bold text-center">
-                  Ism <br />
-                  Familiya
+                  Mahmudjon <br />
+                  Naimjonov
                 </h1>
               </div>
               <div
                 data-aos="zoom-in"
                 data-aos-duration="1000"
-                className="shadow-2xl w-full rounded-2xl px-10 py-[53px] h-full"
+                className="shadow-2xl w-full rounded-2xl px-10 py-10 h-full"
               >
                 <h1 className="text-gray-400">Ko'nikmalar</h1>
                 <div className="flex">
-                  <h1 className="flex gap-2 mt-9 text-lg">
+                  <h1 className="flex gap-2 mt-8 text-lg">
                     <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />{" "}
-                    Ma’lumotlarni tahlil qilish va <br />
-                    vizualizatsiyalar yaratish
+                    Dasturlar va tizimlar bilan <br />
+                    ishlash
                   </h1>
-                  <h1 className="flex gap-2 mt-9 ml-28 text-lg">
+                  <h1 className="flex gap-2 mt-8 text-lg ml-28">
                     <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />{" "}
-                    Statik va dinamik ma’lumotlar <br />
-                    tahlilini amalga oshirish
+                    Avtomatlashtirish va qulaylik
                   </h1>
                 </div>
                 <div className="flex">
-                  <h1 className="flex gap-2 mt-9 text-lg">
+                  <h1 className="flex gap-2 mt-8 text-lg">
                     <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
-                    Kontent yaratish va joylash
+                    Ma’lumotlar bilan ishlash
                   </h1>
-                  <h1 className="flex gap-2 mt-9 ml-[115px] text-lg">
+                  <h1 className="flex gap-2 mt-8 text-lg ml-[115px]">
                     <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
-                    Auditoriya bilan ishlash
-                  </h1>
-                </div>
-                <div className="flex">
-                  <h1 className="flex gap-2 mt-9 text-lg">
-                    <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
-                    Tahlil va optimizatsiya
-                  </h1>
-                  <h1 className="flex gap-2 mt-9 text-lg ml-[167px]">
-                    <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
-                    Reklama va targ‘ibot
+                    Grafik va video tahrirlash
                   </h1>
                 </div>
                 <div className="flex">
-                  <h1 className="flex gap-2 mt-9 text-lg">
+                  <h1 className="flex gap-2 mt-8 text-lg">
                     <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
-                    Brend imidjini shakllantirish.
+                    Dasturlash asoslari
                   </h1>
-                  <h1 className="flex gap-2 mt-9 text-lg ml-[117px]">
+                  <h1 className="flex gap-2 mt-8 text-lg ml-[166px]">
                     <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
-                    Yangiliklardan xabardor bo‘lish
+                    Internet xavfsizligi
+                  </h1>
+                </div>
+                <div className="flex">
+                  <h1 className="flex gap-2 mt-8 text-lg">
+                    <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
+                    Kompyuter va operatsion tizimlar
+                  </h1>
+                  <h1 className="flex gap-2 mt-8 text-lg ml-[52px]">
+                    <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
+                    Internet va onlayn xizmatlar
                   </h1>
                 </div>
               </div>
@@ -274,9 +274,9 @@ function Page() {
               <div className="text-2xl bg-orange-600 rounded-full w-12 h-12 text-white text-center pt-2">
                 hh
               </div>
-              hh.uz ma'lumolatlariga ko'ra, SMM mutaxassisi
+              hh.uz ma'lumolatlariga ko'ra, Kompyuter Savodxonligi mutaxassisi
               <br />
-              o'rtacha ish haqi 9 500 000 tashkil qiladi
+              o'rtacha ish haqi 6 500 000 tashkil qiladi
             </h1>
             <div className="flex gap-3">
               <div
@@ -284,7 +284,7 @@ function Page() {
                 data-aos-duration="1000"
                 className="bg-gray-200 rounded-3xl py-5 px-5 w-full mt-48"
               >
-                <h1 className="text-4xl font-bold text-center">5 000 000</h1>
+                <h1 className="text-4xl font-bold text-center">3 000 000</h1>
                 <h1 className="text-center mx-[71px] mt-8 flex items-center gap-2">
                   <span className="bg-white rounded-3xl px-3 py-2">Junior</span>
                   1 yilgacha
@@ -295,7 +295,7 @@ function Page() {
                 data-aos-duration="1000"
                 className="bg-gray-200 rounded-3xl py-5 px-5 w-full mt-24"
               >
-                <h1 className="text-4xl font-bold text-center">15 000 000</h1>
+                <h1 className="text-4xl font-bold text-center">7 000 000</h1>
                 <h1 className="text-center mx-[60px] mt-32 flex items-center gap-2">
                   <span className="bg-white rounded-3xl px-3 py-2">Middle</span>
                   1-3 yilgacha
@@ -306,9 +306,9 @@ function Page() {
                 data-aos-duration="1000"
                 className="bg-gray-200 rounded-3xl py-5 px-5 w-full"
               >
-                <h1 className="text-4xl font-bold text-center">30 000 000</h1>
-                <h1 className="text-center mx-[85px] mt-56 flex items-center gap-2">
-                  <span className="bg-white rounded-3xl px-3 py-2">Sunior</span>
+                <h1 className="text-4xl font-bold text-center">9 000 000</h1>
+                <h1 className="text-center mx-[86px] mt-56 flex items-center gap-2">
+                  <span className="bg-white rounded-3xl px-3 py-2">Senior</span>
                   3+ yil
                 </h1>
               </div>
@@ -319,7 +319,7 @@ function Page() {
               Ushbu kurs kimlarga to'g'ri keladi
             </h1>
             <h1 className="mt-8">
-              Biz SMM yo'nalishini shu narsalarni istagan o'quvchilar uchun
+              Biz Grafik Dizaynerlikni shu narsalarni istagan o'quvchilar uchun
               qildik
             </h1>
             <div className="flex justify-between mt-7 gap-5">
@@ -432,7 +432,11 @@ function Page() {
               data-aos-duration="1000"
               className="bg-white rounded-2xl px-4 py-5 w-96"
             >
-              <div className="flex items-center gap-2 ml-5">
+              <div
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                className="flex items-center gap-2 ml-5"
+              >
                 <Image className="w-12 h-12" src={Logo} alt="" />
                 <h1 className="font-bold text-2xl">IT HOUSE</h1>
               </div>

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
+import "aos/dist/aos.css";
 import { FaCheck } from "react-icons/fa6";
 import Maths from "@/app/components/imgs/maths.png";
 import Math from "@/app/components/imgs/mathimg.png";
@@ -284,7 +285,7 @@ function Page() {
                 className="bg-gray-200 rounded-3xl py-5 px-5 w-full mt-24"
               >
                 <h1 className="text-4xl font-bold text-center">8 000 000</h1>
-                <h1 className="text-center mx-[60px] mt-8 flex items-center gap-2">
+                <h1 className="text-center mx-[60px] mt-32 flex items-center gap-2">
                   <span className="bg-white rounded-3xl px-3 py-2">Middle</span>
                   1-3 yilgacha
                 </h1>
@@ -295,8 +296,8 @@ function Page() {
                 className="bg-gray-200 rounded-3xl py-5 px-5 w-full"
               >
                 <h1 className="text-4xl font-bold text-center">16 000 000</h1>
-                <h1 className="text-center mx-[87px] mt-48 flex items-center gap-2">
-                  <span className="bg-white rounded-3xl px-3 py-2">Junior</span>
+                <h1 className="text-center mx-[85px] mt-56 flex items-center gap-2">
+                  <span className="bg-white rounded-3xl px-3 py-2">Sunior</span>
                   3+ yil
                 </h1>
               </div>

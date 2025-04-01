@@ -4,9 +4,9 @@ import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaCheck } from "react-icons/fa6";
-import FoundKids from "@/app/components/imgs/Foundkids.png";
-import MS from "@/app/components/imgs/ms.png";
-import Nodirbek from "@/app/components/imgs/Nodirbek.png";
+import Back from "@/app/components/imgs/back-3.png";
+import Web from "@/app/components/imgs/webdev.png";
+import Jonibek from "@/app/components/imgs/Jonibek.png";
 import Girl from "@/app/components/imgs/girl.png";
 import Boy from "@/app/components/imgs/Boy.png";
 import Women from "@/app/components/imgs/Women.png";
@@ -48,21 +48,18 @@ function Kids() {
       <div className="">
         <div className="flex pl-56 pr-24 justify-between bg-blue-50 pb-20 w-full h-wull">
           <div className="mt-36">
-            <h1 className="text-5xl font-bold">Foundation Kids</h1>
-            <h1 className="text-4xl mt-8 font-bold">
-              (Kompyuter savodxonligi)
-            </h1>
+            <h1 className="text-5xl font-bold">Web Dasturlash</h1>
+            <h1 className="text-4xl mt-8 font-bold">(Backend)</h1>
             <h1 className="text-4xl mt-8 font-bold">kursi</h1>
             <h1 className="mt-16">
-              Kompyuter savodxonligi – zamonaviy texnologiyalar bilan ishlash
-              ko‘nikmalarini o‘z <br />
-              ichiga oladi. Bu fan kompyuterning asosiy qismlari, operatsion
-              tizimlar, ofis <br />
-              dasturlari, internetdan foydalanish, ma’lumotlarni saqlash va
-              xavfsizlik choralari kabi <br />
-              mavzularni o‘rgatadi. Kompyuter savodxonligi har qanday sohada
-              ishlash uchun <br />
-              muhim bo‘lib, kundalik hayotda ham foydalidir.
+              Web backend dasturchi – bu veb-sayt yoki ilovaning server qismini
+              ishlab chiqadigan <br />
+              mutaxassis. U foydalanuvchilar ko‘ra olmaydigan, lekin butun
+              tizimning ishlashini <br />
+              ta’minlaydigan qism ustida ishlaydi. Backend dasturchilar
+              ma’lumotlar bazasi, <br />
+              autentifikatsiya, server logikasi va API integratsiyasi bilan
+              shug‘ullanadi.
             </h1>
             <h1 className="flex items-center gap-2 mt-14">
               <FaCheck className="text-red-600" /> Ishga tayyorlash
@@ -87,29 +84,29 @@ function Kids() {
             data-aos-duration="1000"
             data-aos-easing="ease-out"
             className="w-[500px] h-[500px] mt-20"
-            src={FoundKids}
+            src={Back}
             alt="Interior Design"
           />
         </div>
         <div className="pl-64 pr-24 mt-28">
           <h1 className="text-4xl font-bold">
-            Kompyuter savodxonligi nima uchun muhim?
+            Web dasturlash nima uchun kerak?
           </h1>
           <h1 className="text-xl font-semibold mt-20">
-            Zamonaviy dunyoda kompyuter savodxonligi har bir inson uchun zarur.
+            Zamonaviy dunyoda web saytlar har bir inson uchun muhim ko‘nikma.
           </h1>
           <h1 className="text-xl font-semibold mt-8">
-            Elektron pochta, matn muharrirlari, internetda qidiruv, fayllarni
-            boshqarish, kiberxavfsizlik choralari, bulutli <br />
-            texnologiyalar va dasturiy ta’minotdan samarali foydalanish –
-            bularning barchasi kompyuter savodxonligi <br />
-            ko‘nikmalariga kiradi.
+            Web Fullstack dasturlash – frontend va backend texnologiyalarini o‘z
+            ichiga oladi. HTML, CSS, JavaScript orqali <br />
+            interfeys yaratiladi, backend esa PHP, Node.js yoki Python bilan
+            ishlaydi. Ma’lumotlar bazasi sifatida MySQL <br />
+            yoki MongoDB qo‘llaniladi.
           </h1>
           <Image
             data-aos="zoom-in"
             data-aos-duration="1000"
             className="rounded-2xl max-w-full w-[1000px] my-8"
-            src={MS}
+            src={Web}
             alt="Interior Image"
           />
         </div>
@@ -122,14 +119,13 @@ function Kids() {
           <div className="flex mt-12 justify-between">
             <div data-aos="zoom-in" data-aos-duration="1000">
               <h1 className="flex items-center gap-2 font-bold">
-                <IoIosCheckmarkCircle className="text-red-600 text-xl" />{" "}
-                Kompyuter savodxonligi asoslari
+                <IoIosCheckmarkCircle className="text-red-600 text-xl" /> Web
+                dasturlash asoslari
               </h1>
               <h1 className="ml-7 mt-3">
-                Mashg‘ulotlarimizni kompyuter tizimlarining asoslari,
-                <br />
-                ma’lumotlar strukturalari, operatsion tizimlar va <br />
-                algoritmlarni o‘rganishdan boshlaymiz. Sizning <br />
+                Mashg‘ulotlarimizni web texnologiyalarining asoslari, <br />
+                veb-sahifa tuzilishi, server va mijoz tomonidagi <br />
+                dasturlashni o‘rganishdan boshlaymiz. Sizning <br />
                 mantiqiy fikrlash va texnik ko‘nikmalaringizni <br />
                 rivojlantirishga yordam beramiz.
               </h1>
@@ -137,14 +133,14 @@ function Kids() {
             <div data-aos="zoom-in" data-aos-duration="1000">
               <h1 className="flex items-center gap-2 font-bold">
                 <IoIosCheckmarkCircle className="text-red-600 text-xl" />{" "}
-                Dasturiy ta’minot bilan ishlash
+                Dasturiy vositalar bilan ishlash
               </h1>
               <h1 className="ml-7 mt-3">
-                Asosiy dasturiy vositalarni o‘rganamiz: Windows va <br />
-                Linux operatsion tizimlari, Microsoft Office, Google <br />
-                Docs, internet xavfsizligi, fayl tizimlari va bulutli <br />
-                texnologiyalar. Biz interfeys, dasturlar va ularning <br />
-                imkoniyatlari bilan batafsil tanishamiz.
+                Asosiy web backend texnologiyalarini o‘rganamiz: <br />
+                Node.js, PHP (Laravel), Python (Django), MySQL, <br />
+                PostgreSQL va MongoDB. Shuningdek, serverlar, kod <br />
+                muharrirlari va bulutli xizmatlar bilan ishlashni <br />
+                tushuntiramiz.
               </h1>
             </div>
           </div>
@@ -155,10 +151,9 @@ function Kids() {
                 Amaliy ko'nikmalar
               </h1>
               <h1 className="ml-7 mt-3">
-                Siz elektron pochta bilan ishlash, hujjatlar yaratish,
-                <br />
-                ma’lumotlarni tartibga solish, tizimni optimallashtirish <br />
-                va xavfsiz saqlash jarayonlarini o‘rganasiz.
+                Siz veb-sayt yaratish, foydalanuvchi interfeysini <br />
+                loyihalash, ma’lumotlarni tartibga solish va xavfsiz <br />
+                ishlash bo‘yicha muhim ko‘nikmalarga ega bo‘lasiz.
               </h1>
             </div>
             <div data-aos="zoom-in" data-aos-duration="1000">
@@ -167,10 +162,10 @@ function Kids() {
                 Yumshoq ko'nikmalar va o'zini o'zi taqdim etish
               </h1>
               <h1 className="ml-7 mt-3">
-                Muvaffaqiyatli bo‘lish uchun foydalanuvchi <br />
-                texnologiyalarni tushunishi, muammolarni hal qila <br />
-                olishi, samarali muloqot va kreativ yondashuvni <br />
-                rivojlantirishi muhimdir.
+                Muvaffaqiyatli web dasturchi bo‘lish uchun <br />
+                muammolarni hal qilish, mijoz bilan samarali muloqot <br />
+                qilish, kreativ yondashuv va doimiy o‘rganish <br />
+                ko‘nikmalarini rivojlantirish muhimdir.
               </h1>
             </div>
           </div>
@@ -184,17 +179,17 @@ function Kids() {
             <div
               data-aos="zoom-in"
               data-aos-duration="1000"
-              className="shadow-2xl w-96 rounded-2xl px-4 py-24 h-full"
+              className="shadow-2xl w-96 rounded-2xl px-4 py-24 h-[473px]"
             >
               <Image
                 className="rounded-full w-32 h-32 mx-auto"
-                src={Nodirbek}
+                src={Jonibek}
                 alt=""
               />
               <h1 className="text-gray-400 text-center">Mentor</h1>
               <h1 className="text-3xl font-bold text-center">
-                Nodirbek <br />
-                Kuchkarov
+                Jonibek <br />
+                Turapov
               </h1>
             </div>
             <div
@@ -205,44 +200,46 @@ function Kids() {
               <h1 className="text-gray-400">Ko'nikmalar</h1>
               <div className="flex">
                 <h1 className="flex gap-2 mt-9 text-lg">
-                  <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />{" "}
-                  Dasturlar va tizimlar bilan <br />
-                  ishlash
+                  <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
+                  Backend dasturlash
                 </h1>
                 <h1 className="flex gap-2 mt-9 ml-28 text-lg">
-                  <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />{" "}
-                  Avtomatlashtirish va qulaylik
+                  <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
+                  API yaratish va xavfsizlik <br />
+                  asoslarini tushuntiramiz.
                 </h1>
               </div>
               <div className="flex">
                 <h1 className="flex gap-2 mt-9 text-lg">
                   <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
-                  Ma’lumotlar bilan ishlash
+                  Ma’lumotlar bazasi bilan <br />
+                  ishlash
                 </h1>
-                <h1 className="flex gap-2 mt-9 ml-[115px] text-lg">
+                <h1 className="flex gap-2 mt-9 ml-[71px] text-lg">
                   <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
-                  Grafik va video tahrirlash
+                  Web avtomatlashtirish
                 </h1>
               </div>
               <div className="flex">
                 <h1 className="flex gap-2 mt-9 text-lg">
-                  <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />{" "}
-                  Dasturlash asoslari
+                  <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
+                  Frontend bilan integratsiyani <br />
+                  o‘rganamiz.
                 </h1>
-                <h1 className="flex gap-2 mt-9 text-lg ml-[167px]">
-                  <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />{" "}
+                <h1 className="flex gap-2 mt-9 text-lg ml-10">
+                  <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
                   Internet xavfsizligi
                 </h1>
               </div>
               <div className="flex">
                 <h1 className="flex gap-2 mt-9 text-lg">
-                  <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />{" "}
-                  Kompyuter va operatsion <br />
-                  tizimlar
+                  <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
+                  Hosting va deploy
                 </h1>
-                <h1 className="flex gap-2 mt-9 text-lg ml-[117px]">
-                  <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />{" "}
-                  Internet va onlayn xizmatlar
+                <h1 className="flex gap-2 mt-9 text-lg ml-[122px]">
+                  <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
+                  Versiyalarni boshqarish va <br />
+                  jamoada ishlash
                 </h1>
               </div>
             </div>
@@ -254,7 +251,7 @@ function Kids() {
             <div className="text-2xl bg-orange-600 rounded-full w-12 h-12 text-white text-center pt-2">
               hh
             </div>
-            hh.uz ma'lumolatlariga ko'ra, Kompyuter savodxonligi mutaxassisi
+            hh.uz ma'lumolatlariga ko'ra, Web Backend mutaxassisi
             <br />
             o'rtacha ish haqi 6 500 000 tashkil qiladi
           </h1>
@@ -264,7 +261,7 @@ function Kids() {
               data-aos-duration="1000"
               className="bg-gray-200 rounded-3xl py-5 px-5 w-full mt-48"
             >
-              <h1 className="text-4xl font-bold text-center">3 000 000</h1>
+              <h1 className="text-4xl font-bold text-center">5 000 000</h1>
               <h1 className="text-center mx-[71px] mt-8 flex items-center gap-2">
                 <span className="bg-white rounded-3xl px-3 py-2">Junior</span>1
                 yilgacha
@@ -275,7 +272,7 @@ function Kids() {
               data-aos-duration="1000"
               className="bg-gray-200 rounded-3xl py-5 px-5 w-full mt-24"
             >
-              <h1 className="text-4xl font-bold text-center">7 000 000</h1>
+              <h1 className="text-4xl font-bold text-center">15 000 000</h1>
               <h1 className="text-center mx-[60px] mt-32 flex items-center gap-2">
                 <span className="bg-white rounded-3xl px-3 py-2">Middle</span>
                 1-3 yilgacha
@@ -286,7 +283,7 @@ function Kids() {
               data-aos-duration="1000"
               className="bg-gray-200 rounded-3xl py-5 px-5 w-full"
             >
-              <h1 className="text-4xl font-bold text-center">9 000 000</h1>
+              <h1 className="text-4xl font-bold text-center">30 000 000</h1>
               <h1 className="text-center mx-[85px] mt-56 flex items-center gap-2">
                 <span className="bg-white rounded-3xl px-3 py-2">Sunior</span>3+
                 yil
