@@ -14,11 +14,21 @@ function Footer() {
     <div className="px-44 flex justify-between pt-20">
       <ul>
         <h1 className="text-2xl font-semibold">Ma'lumotlar</h1>
-        <li className="mt-6"><a href="#">Bosh sahifa</a></li>
-        <li className="mt-2"><a href="#mentors">Mentorlar</a></li>
-        <li className="mt-2"><a href="#courses">Kurslar</a></li>
-        <li className="mt-2"><a href="#4">Bitiruvchilar</a></li>
-        <li className="mt-2"><a href="#contact">Aloqa</a></li>
+        <li className="mt-6">
+          <a href="#">Bosh sahifa</a>
+        </li>
+        <li className="mt-2">
+          <a href="#mentors">Mentorlar</a>
+        </li>
+        <li className="mt-2">
+          <a href="#courses">Kurslar</a>
+        </li>
+        <li className="mt-2">
+          <a href="#4">Bitiruvchilar</a>
+        </li>
+        <li className="mt-2">
+          <a href="#contact">Aloqa</a>
+        </li>
       </ul>
       <ul>
         <h1 className="text-2xl font-semibold">Yo'nalishlar</h1>

@@ -301,31 +301,56 @@ export default function Card() {
           </div>
         </div>
 
-        <h1 id="mentors" className="text-4xl font-bold">Bizning Jamoa</h1>
-        <Carousel className="h-[400px] mt-8">
-          <CarouselContent className="max-sm:flex-col max-sm:gap-5">
-            {teachers.map((teacher, index) => (
-              <CarouselItem
-                key={index}
-                className={`basis-full ${
-                  index === currentIndex ? "block" : "hidden"
-                }`}
-              >
-                <div className="w-60 flex flex-col items-center text-center shadow-2xl">
-                  <Image
-                    src={teacher.img}
-                    alt="O'qituvchi rasmi"
-                    width={400}
-                    height={350}
-                    className="rounded-lg"
-                  />
-                  <h1 className="text-3xl font-bold mt-5">{teacher.name}</h1>
-                  <h2 className="text-xl mt-2">{teacher.job}</h2>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+        <div className="w-full flex flex-col items-center">
+          <h1 id="mentors" className="text-4xl font-bold">
+            Bizning Jamoa
+          </h1>
+          <Carousel className="mt-8 overflow-hidden relative w-[90%]">
+            <CarouselContent
+              className="flex transition-transform duration-500 ease-in-out gap-5"
+              style={{
+                transform: `translateX(-${
+                  (currentIndex % teachers.length) * 33.33
+                }%)`, // Har bir rasmning kengligi 33.33% bo'lib, 3 ta rasm markazda ko'rinadi
+              }}
+            >
+              {teachers.map((teacher, index) => (
+                <CarouselItem
+                  key={index}
+                  className="flex-none w-1/3 px-2 transition-all duration-500"
+                  style={{
+                    opacity:
+                      index === currentIndex + 1 || index === currentIndex + 2
+                        ? 1
+                        : 0.3, // Markazdagi ikkita rasm tiniq, chetda esa xira bo'ladi
+                    transform:
+                      index === currentIndex + 1 || index === currentIndex + 2
+                        ? "scale(1.1)"
+                        : "scale(0.8)", // Markazdagi rasmlar kattalashadi, chetda kichikroq bo'ladi
+                    marginLeft:
+                      index === currentIndex
+                        ? "-25%" // Chap chet rasmiga yarim ko'rinish
+                        : index === currentIndex + 3
+                        ? "25%" // O'ng chet rasmiga yarim ko'rinish
+                        : "0%", // Markazdagi rasmlar to'liq ko'rinadi
+                  }}
+                >
+                  <div className="w-full flex flex-col items-center text-center h-96">
+                    <Image
+                      src={teacher.img}
+                      alt="O'qituvchi rasmi"
+                      width={300}
+                      height={250}
+                      className="rounded-lg"
+                    />
+                    <h1 className="text-2xl font-bold mt-5">{teacher.name}</h1>
+                    <h2 className="text-lg mt-2">{teacher.job}</h2>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
 
         <h1 className="text-4xl font-bold">Kurslar</h1>
         <div id="courses" className="grid grid-cols-3 gap-7 mt-7">
@@ -457,7 +482,10 @@ export default function Card() {
         </h1>
       </div>
 
-      <div id="cantact" className="mt-16 bg-red-600 flex items-center justify-between pt-16 pb-20 px-56">
+      <div
+        id="cantact"
+        className="mt-16 bg-red-600 flex items-center justify-between pt-16 pb-20 px-56"
+      >
         <h1 className="text-4xl font-bold text-white">
           Kurslar haqida to'liq ma'lumotga <br />
           ega bo'lishni istasangiz <br />

@@ -1,5 +1,8 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { FaCheck } from "react-icons/fa6";
 import FoundKids from "@/app/components/imgs/Foundkids.png";
 import MS from "@/app/components/imgs/word.png";
@@ -9,11 +12,36 @@ import Boy from "@/app/components/imgs/Boy.png";
 import Women from "@/app/components/imgs/Women.png";
 import Bitir from "@/app/components/imgs/Bitir.png";
 import Logo from "@/app/components/imgs/logo.png";
-import Navbar from "../components/navbar";
+import Navbar from "../navbar";
 import Footer from "../components/footer";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 
 function Kids() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Umumiy animatsiya davomiyligi
+      easing: "ease-out", // Sekin chiqish effekti
+      once: true, // Bir marta ishga tushishi uchun
+    });
+  }, []);
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault(); // Formani qayta yuklanishdan to'xtatadi
+    // Yuborish logikasi
+    console.log("Ism:", name);
+    console.log("Telefon raqam:", phone);
+
+    // Inputlarni tozalash
+    setName("");
+    setPhone("");
+
+    // Saytni yangilash
+    window.location.reload(); // Sahifani yangilash
+  };
+
   return (
     <div>
       <Navbar />
@@ -54,7 +82,14 @@ function Kids() {
               <FaCheck className="text-red-600" /> Kurs yakunida sertifikat
             </h1>
           </div>
-          <Image className="w-[600px] h-[600px] mt-20" src={FoundKids} alt="" />
+          <Image
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
+            className="w-[500px] h-[500px] mt-20"
+            src={FoundKids}
+            alt="Interior Design"
+          />
         </div>
         <div className="pl-64 pr-24 mt-28">
           <h1 className="text-4xl font-bold">
@@ -70,15 +105,22 @@ function Kids() {
             bularning barchasi kompyuter savodxonligi <br />
             ko‘nikmalariga kiradi.
           </h1>
-          <Image className="rounded-2xl w-[1000px] mt-8" src={MS} alt="" />
+          <Image
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            className="rounded-2xl max-w-full w-[1000px] my-8"
+            src={MS}
+            alt="Interior Image"
+          />
         </div>
-        <div className="px-64 mt-28">
+        <div id="1" className="mt-12 mb-12 bg-white w-full h-12"></div>
+        <div className="px-64">
           <h1 className="text-4xl font-bold">
             Kasbda boshlash uchun kerak bo'lgan hamma <br />
             narsani o'rgatamiz
           </h1>
-          <div className="flex mt-28 justify-between">
-            <div>
+          <div className="flex mt-12 justify-between">
+            <div data-aos="zoom-in" data-aos-duration="1000">
               <h1 className="flex items-center gap-2 font-bold">
                 <IoIosCheckmarkCircle className="text-red-600 text-xl" />{" "}
                 Kompyuter savodxonligi asoslari
@@ -92,7 +134,7 @@ function Kids() {
                 rivojlantirishga yordam beramiz.
               </h1>
             </div>
-            <div>
+            <div data-aos="zoom-in" data-aos-duration="1000">
               <h1 className="flex items-center gap-2 font-bold">
                 <IoIosCheckmarkCircle className="text-red-600 text-xl" />{" "}
                 Dasturiy ta’minot bilan ishlash
@@ -106,8 +148,8 @@ function Kids() {
               </h1>
             </div>
           </div>
-          <div className="flex mt-28 justify-between">
-            <div>
+          <div className="flex mt-12 justify-between">
+            <div data-aos="zoom-in" data-aos-duration="1000">
               <h1 className="flex items-center gap-2 font-bold">
                 <IoIosCheckmarkCircle className="text-red-600 text-xl" />
                 Amaliy ko'nikmalar
@@ -119,7 +161,7 @@ function Kids() {
                 va xavfsiz saqlash jarayonlarini o‘rganasiz.
               </h1>
             </div>
-            <div>
+            <div data-aos="zoom-in" data-aos-duration="1000">
               <h1 className="flex items-center gap-2 font-bold">
                 <IoIosCheckmarkCircle className="text-red-600 text-xl" />
                 Yumshoq ko'nikmalar va o'zini o'zi taqdim etish
@@ -133,13 +175,17 @@ function Kids() {
             </div>
           </div>
         </div>
-        <div className="mt-40 bg-blue-50 px-64 py-20">
+        <div id="mentor" className="mt-24 bg-blue-50 px-64 py-20">
           <h1 className="text-4xl font-bold">
             Biz sizga kompyter savodxonligini asosiy <br />
             ko'nikmalarini o'rgatamiz
           </h1>
-          <div className="flex gap-3">
-            <div className="shadow-2xl w-96 rounded-2xl px-4 py-24 h-full">
+          <div className="flex gap-3 mt-8">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              className="shadow-2xl w-96 rounded-2xl px-4 py-24 h-full"
+            >
               <Image
                 className="rounded-full w-32 h-32 mx-auto"
                 src={Nodirbek}
@@ -151,7 +197,11 @@ function Kids() {
                 Kuchkarov
               </h1>
             </div>
-            <div className="shadow-2xl w-full rounded-2xl px-10 py-10 h-full">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              className="shadow-2xl w-full rounded-2xl px-10 py-10 h-full"
+            >
               <h1 className="text-gray-400">Ko'nikmalar</h1>
               <div className="flex">
                 <h1 className="flex gap-2 mt-9 text-lg">
@@ -190,7 +240,7 @@ function Kids() {
                   Kompyuter va operatsion <br />
                   tizimlar
                 </h1>
-                <h1 className="flex gap-2 mt-9 text-lg ml-14">
+                <h1 className="flex gap-2 mt-9 text-lg ml-[117px]">
                   <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />{" "}
                   Internet va onlayn xizmatlar
                 </h1>
@@ -209,24 +259,37 @@ function Kids() {
             o'rtacha ish haqi 6 500 000 tashkil qiladi
           </h1>
           <div className="flex gap-3">
-            <div className="bg-gray-200 rounded-3xl py-5 px-5 w-full mt-48">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="bg-gray-200 rounded-3xl py-5 px-5 w-full mt-48"
+            >
               <h1 className="text-4xl font-bold text-center">3 000 000</h1>
               <h1 className="text-center mx-[71px] mt-8 flex items-center gap-2">
                 <span className="bg-white rounded-3xl px-3 py-2">Junior</span>1
                 yilgacha
               </h1>
             </div>
-            <div className="bg-gray-200 rounded-3xl py-5 px-5 w-full mt-24">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="bg-gray-200 rounded-3xl py-5 px-5 w-full mt-24"
+            >
               <h1 className="text-4xl font-bold text-center">7 000 000</h1>
               <h1 className="text-center mx-[60px] mt-8 flex items-center gap-2">
-                <span className="bg-white rounded-3xl px-3 py-2">Middle</span>1-3
-                yilgacha
+                <span className="bg-white rounded-3xl px-3 py-2">Middle</span>
+                1-3 yilgacha
               </h1>
             </div>
-            <div className="bg-gray-200 rounded-3xl py-5 px-5 w-full">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="bg-gray-200 rounded-3xl py-5 px-5 w-full"
+            >
               <h1 className="text-4xl font-bold text-center">9 000 000</h1>
               <h1 className="text-center mx-[87px] mt-48 flex items-center gap-2">
-                <span className="bg-white rounded-3xl px-3 py-2">Junior</span>3+ yil
+                <span className="bg-white rounded-3xl px-3 py-2">Junior</span>3+
+                yil
               </h1>
             </div>
           </div>
@@ -240,7 +303,11 @@ function Kids() {
             qildik
           </h1>
           <div className="flex justify-between mt-7 gap-5">
-            <div className="bg-gray-300 rounded-2xl px-3 py-8 w-full">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              className="bg-gray-300 rounded-2xl px-3 py-8 w-full"
+            >
               <Image className="rounded-full w-24 h-24" src={Girl} alt="" />
               <h1 className="text-xl font-bold mt-4">
                 Kasbni noldan boshlab o'rganish
@@ -262,7 +329,11 @@ function Kids() {
                 portfolioingizni to'plang
               </h1>
             </div>
-            <div className="bg-gray-300 rounded-2xl px-3 py-8 w-full">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              className="bg-gray-300 rounded-2xl px-3 py-8 w-full"
+            >
               <Image className="rounded-full w-24 h-24" src={Boy} alt="" />
               <h1 className="text-xl font-bold mt-4">
                 Bilimlarni tizimlashtirish va kompyuter savodxonligini o'z
@@ -284,7 +355,11 @@ function Kids() {
                 bilan to'ldiring
               </h1>
             </div>
-            <div className="bg-gray-300 rounded-2xl px-3 py-8 w-full">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              className="bg-gray-300 rounded-2xl px-3 py-8 w-full"
+            >
               <Image className="rounded-full w-24 h-24" src={Women} alt="" />
               <h1 className="text-xl font-bold mt-4">
                 Marketolog, muharrir va boshqa <br />
@@ -308,50 +383,63 @@ function Kids() {
             </div>
           </div>
         </div>
-        <div className="px-64 mt-16">
+        <div id="3" className="mt-12 mb-12 bg-white w-full h-12"></div>
+        <div className="px-64">
           <h1 className="text-4xl font-bold">Bizning Bitiruvchilar</h1>
-          <Image className="w-full mt-10" src={Bitir} alt="" />
+          <Image
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            className="w-full mt-10"
+            src={Bitir}
+            alt=""
+          />
         </div>
         <div
-          id="cantact"
-          className="mt-16 bg-red-600 flex items-center justify-between pt-16 pb-20 px-56"
+          id="contact"
+          className="bg-red-600 flex items-center justify-between pt-32 mt-28 pb-20 px-56"
         >
-          <h1 className="text-4xl font-bold text-white">
+          <h1
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            className="text-4xl font-bold text-white"
+          >
             Kurslar haqida to'liq ma'lumotga <br />
             ega bo'lishni istasangiz <br />
             formani to'ldiring
           </h1>
-          <div className="bg-white rounded-2xl px-4 py-5 w-96">
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            className="bg-white rounded-2xl px-4 py-5 w-96"
+          >
             <div className="flex items-center gap-2 ml-5">
               <Image className="w-12 h-12" src={Logo} alt="" />
               <h1 className="font-bold text-2xl">IT HOUSE</h1>
             </div>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                location.reload();
-              }}
-            >
-              <input
-                className="w-full outline-none mt-7 border-b-2 border-b-black"
-                type="text"
-                placeholder="Ism"
-                required
-              />
-              <br />
-              <input
-                className="w-full outline-none mt-5 border-b-2 border-b-black"
-                type="number"
-                placeholder="Telefon raqam"
-                required
-              />
-              <button
-                type="submit"
-                className="bg-gray-500 w-48 h-14 px-7 py-1 rounded-xl text-lg font-bold text-white mt-20 mx-20 mb-12"
-              >
-                Yuborish
-              </button>
-            </form>
+            <div>
+              <form onSubmit={handleSubmit}>
+                <input
+                  className="border-b-2 border-b-black mt-12 outline-none w-full"
+                  type="text"
+                  placeholder="Ism"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)} // Inputni boshqarish
+                />
+                <input
+                  className="border-b-2 border-b-black mt-8 outline-none w-full"
+                  type="number"
+                  placeholder="Telefon raqam"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)} // Inputni boshqarish
+                />
+                <button
+                  type="submit"
+                  className="bg-gray-400 text-white rounded-lg mt-20 mx-20 mb-12 px-16 py-3"
+                >
+                  Yuborish
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
