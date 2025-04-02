@@ -1,10 +1,10 @@
 "use client";
-
-import {
+import {  
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/app/components/ui/carousel";
+import Slider from "react-slick";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Front from "@/app/components/imgs/front-3.png";
@@ -78,21 +78,6 @@ const items = [
     text: "Interyer dizayn ni biz bilan o‘rganing – kelajagingiz uchun qadam bosing!",
     img: Inter,
   },
-];
-
-const teachers = [
-  { name: "Temurber Yorkulov", job: "Kiberxafvsizlik", img: Temurbek },
-  { name: "Nodirbek Kuchkarov", job: "AI, Foundation Kids", img: Nodirbek },
-  { name: "Jaloliddin Abdurahmonov", job: "Web Dasturlash", img: Jaloliddin },
-  { name: "Hikmatillo Bobomurodov", job: "Matematika", img: Hikmatillo },
-  { name: "Mahmudjon Naimjonov", job: "Foundation", img: Mahmudjon },
-  { name: "Abror Narziqulov", job: "Grafik Dizayn", img: Abror },
-  { name: "Sevara Jo'rayeva", job: "Ingliz Tili", img: Sevara },
-  { name: "Xumoyun", job: "Phyton", img: Xumoyun },
-  { name: "Jonibek To'rapov", job: "Web Dasturlash", img: Jonibek },
-  { name: "Zuxra", job: "Rus Tili", img: Zuxra },
-  { name: "Laylo", job: "Call Center", img: Laylo },
-  { name: "Nigina", job: "Call Center", img: Nigina },
 ];
 
 const courses = [
@@ -206,6 +191,15 @@ export default function Card() {
   const [hovered, setHovered] = useState<number | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 2,
+    speed: 500,
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
@@ -244,7 +238,7 @@ export default function Card() {
           IT HOUSE qanday ishlaydi?
         </h1>
 
-        <div className="flex items-center justify-between mt-20">
+        <div className="flex items-center justify-between mt-20 gap-3">
           {[
             {
               id: 1,
@@ -301,55 +295,146 @@ export default function Card() {
           </div>
         </div>
 
-        <div className="w-full flex flex-col items-center">
+        <div className="w-full flex flex-col items-center mt-8">
           <h1 id="mentors" className="text-4xl font-bold">
             Bizning Jamoa
           </h1>
-          <Carousel className="mt-8 overflow-hidden relative w-[90%]">
-            <CarouselContent
-              className="flex transition-transform duration-500 ease-in-out gap-5"
-              style={{
-                transform: `translateX(-${
-                  (currentIndex % teachers.length) * 33.33
-                }%)`, // Har bir rasmning kengligi 33.33% bo'lib, 3 ta rasm markazda ko'rinadi
-              }}
-            >
-              {teachers.map((teacher, index) => (
-                <CarouselItem
-                  key={index}
-                  className="flex-none w-1/3 px-2 transition-all duration-500"
-                  style={{
-                    opacity:
-                      index === currentIndex + 1 || index === currentIndex + 2
-                        ? 1
-                        : 0.3, // Markazdagi ikkita rasm tiniq, chetda esa xira bo'ladi
-                    transform:
-                      index === currentIndex + 1 || index === currentIndex + 2
-                        ? "scale(1.1)"
-                        : "scale(0.8)", // Markazdagi rasmlar kattalashadi, chetda kichikroq bo'ladi
-                    marginLeft:
-                      index === currentIndex
-                        ? "-25%" // Chap chet rasmiga yarim ko'rinish
-                        : index === currentIndex + 3
-                        ? "25%" // O'ng chet rasmiga yarim ko'rinish
-                        : "0%", // Markazdagi rasmlar to'liq ko'rinadi
-                  }}
-                >
-                  <div className="w-full flex flex-col items-center text-center h-96">
-                    <Image
-                      src={teacher.img}
-                      alt="O'qituvchi rasmi"
-                      width={300}
-                      height={250}
-                      className="rounded-lg"
-                    />
-                    <h1 className="text-2xl font-bold mt-5">{teacher.name}</h1>
-                    <h2 className="text-lg mt-2">{teacher.job}</h2>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
+          <div className="slider-container">
+            <Slider {...settings}>
+              <div className="px-4 py-6 bg-white shadow">
+                <Image
+                  className="rounded-2xl w-28 h-28"
+                  src={Temurbek}
+                  alt=""
+                />
+                <h1 className="font-bold text-xl text-center">
+                  Temurbek Yorkulov
+                </h1>
+                <h1 className="text-sm text-center">Kiberxavfsizlik</h1>
+              </div>
+              <div className="px-4 py-6 bg-white shadow">
+                <Image
+                  className="rounded-2xl w-28 h-28"
+                  src={Nodirbek}
+                  alt=""
+                />
+                <h1 className="font-bold text-xl text-center">
+                  Nodirbek Kuchkarov
+                </h1>
+                <h1 className="text-sm text-center">AI, Foundation Kids</h1>
+              </div>
+              <div className="px-4 py-6 bg-white shadow">
+                <Image
+                  className="rounded-2xl w-28 h-28"
+                  src={Jaloliddin}
+                  alt=""
+                />
+                <h1 className="font-bold text-xl text-center">
+                  Jaloliddin Abdurahmonov
+                </h1>
+                <h1 className="text-sm text-center">Web Dasturlash</h1>
+              </div>
+              <div className="px-4 py-6 bg-white shadow">
+                <Image
+                  className="rounded-2xl w-28 h-28"
+                  src={Hikmatillo}
+                  alt=""
+                />
+                <h1 className="font-bold text-xl text-center">
+                  HIkmatillo Bobomurodov
+                </h1>
+                <h1 className="text-sm text-center">Matematika</h1>
+              </div>
+              <div className="px-4 py-6 bg-white shadow">
+                <Image
+                  className="rounded-2xl w-28 h-28"
+                  src={Mahmudjon}
+                  alt=""
+                />
+                <h1 className="font-bold text-xl text-center">
+                  Mahmudjon Naimjonov
+                </h1>
+                <h1 className="text-sm text-center">Foundation</h1>
+              </div>
+              <div className="px-4 py-6 bg-white shadow">
+                <Image
+                  className="rounded-2xl w-28 h-28"
+                  src={Abror}
+                  alt=""
+                />
+                <h1 className="font-bold text-xl text-center">
+                  Abror Narziqulov
+                </h1>
+                <h1 className="text-sm text-center">Grafik Dizayn</h1>
+              </div>
+              <div className="px-4 py-6 bg-white shadow">
+                <Image
+                  className="rounded-2xl w-28 h-28"
+                  src={Sevara}
+                  alt=""
+                />
+                <h1 className="font-bold text-xl text-center">
+                  Sevara Jo'rayeva
+                </h1>
+                <h1 className="text-sm text-center">Ingliz Tili</h1>
+              </div>
+              <div className="px-4 py-6 bg-white shadow">
+                <Image
+                  className="rounded-2xl w-28 h-28"
+                  src={Xumoyun}
+                  alt=""
+                />
+                <h1 className="font-bold text-xl text-center">
+                  Xumoyun
+                </h1>
+                <h1 className="text-sm text-center">Phython</h1>
+              </div>
+              <div className="px-4 py-6 bg-white shadow">
+                <Image
+                  className="rounded-2xl w-28 h-28"
+                  src={Jonibek}
+                  alt=""
+                />
+                <h1 className="font-bold text-xl text-center">
+                  Jonibek To'rapov
+                </h1>
+                <h1 className="text-sm text-center">Web Dasturlash</h1>
+              </div>
+              <div className="px-4 py-6 bg-white shadow">
+                <Image
+                  className="rounded-2xl w-28 h-28"
+                  src={Zuxra}
+                  alt=""
+                />
+                <h1 className="font-bold text-xl text-center">
+                  Zuxra
+                </h1>
+                <h1 className="text-sm text-center">Rus Tili</h1>
+              </div>
+              <div className="px-4 py-6 bg-white shadow">
+                <Image
+                  className="rounded-2xl w-28 h-28"
+                  src={Laylo}
+                  alt=""
+                />
+                <h1 className="font-bold text-xl text-center">
+                  Laylo
+                </h1>
+                <h1 className="text-sm text-center">Call Center</h1>
+              </div>
+              <div className="px-4 py-6 bg-white shadow">
+                <Image
+                  className="rounded-2xl w-28 h-28"
+                  src={Nigina}
+                  alt=""
+                />
+                <h1 className="font-bold text-xl text-center">
+                  Nigina
+                </h1>
+                <h1 className="text-sm text-center">Call Center</h1>
+              </div>
+            </Slider>
+          </div>
         </div>
 
         <h1 className="text-4xl font-bold">Kurslar</h1>
@@ -373,7 +458,7 @@ export default function Card() {
                 </div>
               </div>
               <div>
-                <PiCursorFill className="text-red-600 text-2xl ml-64 rotate-12" />
+                <PiCursorFill className="text-red-600 text-2xl ml-52 rotate-12" />
               </div>
               {/* Modal */}
               {hovered === course.id && (
@@ -388,7 +473,7 @@ export default function Card() {
         <h1 className="text-4xl font-bold mt-8">
           Nima uchun "IT HOUSE" da o'qish kerak?
         </h1>
-        <div className="flex items-center justify-between mt-9">
+        <div className="flex items-center justify-between mt-9 gap-3">
           <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl">
             <Image
               className="w-12 h-12 bg-white rounded-full"
@@ -413,7 +498,7 @@ export default function Card() {
             </h1>
           </div>
         </div>
-        <div className="flex items-center justify-between mt-6">
+        <div className="flex items-center justify-between mt-6 gap-3">
           <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl">
             <Image
               className="w-12 h-12 bg-white rounded-full"
@@ -438,7 +523,7 @@ export default function Card() {
             </h1>
           </div>
         </div>
-        <div className="flex items-center justify-between mt-6">
+        <div className="flex items-center justify-between mt-6 gap-3">
           <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl">
             <Image
               className="w-12 h-12 bg-white rounded-full"

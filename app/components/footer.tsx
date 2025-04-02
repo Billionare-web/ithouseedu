@@ -15,7 +15,7 @@ function Footer() {
       <ul>
         <h1 className="text-2xl font-semibold">Ma'lumotlar</h1>
         <li className="mt-6">
-          <a href="#">Bosh sahifa</a>
+          <a href="/">Bosh sahifa</a>
         </li>
         <li className="mt-2">
           <a href="#mentors">Mentorlar</a>
@@ -39,18 +39,18 @@ function Footer() {
           <Link href={"/kids"}>Foundation Kids</Link>
         </li>
         <li className="mt-2">
-          <Link href={"https://grafik-dizayn.ithouseedu.uz/"}>
+          <Link href={"/grafik-dizayn"}>
             Grafik Dizayn
           </Link>
         </li>
         <li className="mt-2">
-          <Link href={"https://frontend.ithouseedu.uz/"}>Web Frontend</Link>
+          <Link href={"/frontend"}>Web Frontend</Link>
         </li>
         <li className="mt-2">
-          <Link href={"https://backend.ithouseedu.uz/"}>Web Backend</Link>
+          <Link href={"/backend"}>Web Backend</Link>
         </li>
         <li className="mt-2">
-          <Link href={"https://python.ithouseedu.uz/"}>Phyton</Link>
+          <Link href={"/python"}>Phyton</Link>
         </li>
         <li className="mt-2">
           <Link href={"https://ai.ithouseedu.uz/"}>AI, Su'niy Intellekt</Link>
@@ -116,14 +116,14 @@ function Footer() {
           </Link>
         </li>
         <li className="mt-2 mb-20">
-          <Link
+          <a
             className="flex items-center gap-2"
             target="_blank"
-            href={"https://tel:+998900352727"}
+            href="tel: +998900352727"
           >
             <FaPhoneAlt className="text-red-600 hover:text-black" /> +998 90
             035-27-27
-          </Link>
+          </a>
         </li>
       </ul>
     </div>
