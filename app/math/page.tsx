@@ -355,8 +355,9 @@ function Page() {
                 </h1>
                 <h1 className="flex mt-6 gap-2">
                   <FaCheck />
-                  Kompyuterda har tomonlama <br />
-                  bilimlaringizni kuchaytiring
+                  Kompozitsiya, algoritmlar va <br />
+                  matematik tahlil <br />
+                  mahoratingizni oshiring.
                 </h1>
                 <h1 className="flex mt-6 pb-12 gap-2">
                   <FaCheck />

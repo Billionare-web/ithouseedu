@@ -1,5 +1,5 @@
 "use client";
-import {  
+import {
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -299,139 +299,121 @@ export default function Card() {
           <h1 id="mentors" className="text-4xl font-bold">
             Bizning Jamoa
           </h1>
-          <div className="slider-container">
+          <div className="">
             <Slider {...settings}>
-              <div className="px-4 py-6 bg-white shadow">
-                <Image
-                  className="rounded-2xl w-28 h-28"
-                  src={Temurbek}
-                  alt=""
-                />
-                <h1 className="font-bold text-xl text-center">
-                  Temurbek Yorkulov
-                </h1>
-                <h1 className="text-sm text-center">Kiberxavfsizlik</h1>
-              </div>
-              <div className="px-4 py-6 bg-white shadow">
-                <Image
-                  className="rounded-2xl w-28 h-28"
-                  src={Nodirbek}
-                  alt=""
-                />
-                <h1 className="font-bold text-xl text-center">
-                  Nodirbek Kuchkarov
-                </h1>
-                <h1 className="text-sm text-center">AI, Foundation Kids</h1>
-              </div>
-              <div className="px-4 py-6 bg-white shadow">
-                <Image
-                  className="rounded-2xl w-28 h-28"
-                  src={Jaloliddin}
-                  alt=""
-                />
-                <h1 className="font-bold text-xl text-center">
-                  Jaloliddin Abdurahmonov
-                </h1>
-                <h1 className="text-sm text-center">Web Dasturlash</h1>
-              </div>
-              <div className="px-4 py-6 bg-white shadow">
-                <Image
-                  className="rounded-2xl w-28 h-28"
-                  src={Hikmatillo}
-                  alt=""
-                />
-                <h1 className="font-bold text-xl text-center">
-                  HIkmatillo Bobomurodov
-                </h1>
-                <h1 className="text-sm text-center">Matematika</h1>
-              </div>
-              <div className="px-4 py-6 bg-white shadow">
-                <Image
-                  className="rounded-2xl w-28 h-28"
-                  src={Mahmudjon}
-                  alt=""
-                />
-                <h1 className="font-bold text-xl text-center">
-                  Mahmudjon Naimjonov
-                </h1>
-                <h1 className="text-sm text-center">Foundation</h1>
-              </div>
-              <div className="px-4 py-6 bg-white shadow">
-                <Image
-                  className="rounded-2xl w-28 h-28"
-                  src={Abror}
-                  alt=""
-                />
-                <h1 className="font-bold text-xl text-center">
-                  Abror Narziqulov
-                </h1>
-                <h1 className="text-sm text-center">Grafik Dizayn</h1>
-              </div>
-              <div className="px-4 py-6 bg-white shadow">
-                <Image
-                  className="rounded-2xl w-28 h-28"
-                  src={Sevara}
-                  alt=""
-                />
-                <h1 className="font-bold text-xl text-center">
-                  Sevara Jo'rayeva
-                </h1>
-                <h1 className="text-sm text-center">Ingliz Tili</h1>
-              </div>
-              <div className="px-4 py-6 bg-white shadow">
-                <Image
-                  className="rounded-2xl w-28 h-28"
-                  src={Xumoyun}
-                  alt=""
-                />
-                <h1 className="font-bold text-xl text-center">
-                  Xumoyun
-                </h1>
-                <h1 className="text-sm text-center">Phython</h1>
-              </div>
-              <div className="px-4 py-6 bg-white shadow">
-                <Image
-                  className="rounded-2xl w-28 h-28"
-                  src={Jonibek}
-                  alt=""
-                />
-                <h1 className="font-bold text-xl text-center">
-                  Jonibek To'rapov
-                </h1>
-                <h1 className="text-sm text-center">Web Dasturlash</h1>
-              </div>
-              <div className="px-4 py-6 bg-white shadow">
-                <Image
-                  className="rounded-2xl w-28 h-28"
-                  src={Zuxra}
-                  alt=""
-                />
-                <h1 className="font-bold text-xl text-center">
-                  Zuxra
-                </h1>
-                <h1 className="text-sm text-center">Rus Tili</h1>
-              </div>
-              <div className="px-4 py-6 bg-white shadow">
-                <Image
-                  className="rounded-2xl w-28 h-28"
-                  src={Laylo}
-                  alt=""
-                />
-                <h1 className="font-bold text-xl text-center">
-                  Laylo
-                </h1>
-                <h1 className="text-sm text-center">Call Center</h1>
-              </div>
-              <div className="px-4 py-6 bg-white shadow">
-                <Image
-                  className="rounded-2xl w-28 h-28"
-                  src={Nigina}
-                  alt=""
-                />
-                <h1 className="font-bold text-xl text-center">
-                  Nigina
-                </h1>
-                <h1 className="text-sm text-center">Call Center</h1>
+              <div className="flex items-center gap-5">
+                <div className="px-4 py-6 bg-white shadow">
+                  <Image
+                    className="rounded-2xl w-28 h-28"
+                    src={Temurbek}
+                    alt=""
+                  />
+                  <h1 className="font-bold text-xl text-center">
+                    Temurbek Yorkulov
+                  </h1>
+                  <h1 className="text-sm text-center">Kiberxavfsizlik</h1>
+                </div>
+                <div className="px-4 py-6 bg-white shadow">
+                  <Image
+                    className="rounded-2xl w-28 h-28"
+                    src={Nodirbek}
+                    alt=""
+                  />
+                  <h1 className="font-bold text-xl text-center">
+                    Nodirbek Kuchkarov
+                  </h1>
+                  <h1 className="text-sm text-center">AI, Foundation Kids</h1>
+                </div>
+                <div className="px-4 py-6 bg-white shadow">
+                  <Image
+                    className="rounded-2xl w-28 h-28"
+                    src={Jaloliddin}
+                    alt=""
+                  />
+                  <h1 className="font-bold text-xl text-center">
+                    Jaloliddin Abdurahmonov
+                  </h1>
+                  <h1 className="text-sm text-center">Web Dasturlash</h1>
+                </div>
+                <div className="px-4 py-6 bg-white shadow">
+                  <Image
+                    className="rounded-2xl w-28 h-28"
+                    src={Hikmatillo}
+                    alt=""
+                  />
+                  <h1 className="font-bold text-xl text-center">
+                    HIkmatillo Bobomurodov
+                  </h1>
+                  <h1 className="text-sm text-center">Matematika</h1>
+                </div>
+                <div className="px-4 py-6 bg-white shadow">
+                  <Image
+                    className="rounded-2xl w-28 h-28"
+                    src={Mahmudjon}
+                    alt=""
+                  />
+                  <h1 className="font-bold text-xl text-center">
+                    Mahmudjon Naimjonov
+                  </h1>
+                  <h1 className="text-sm text-center">Foundation</h1>
+                </div>
+                <div className="px-4 py-6 bg-white shadow">
+                  <Image className="rounded-2xl w-28 h-28" src={Abror} alt="" />
+                  <h1 className="font-bold text-xl text-center">
+                    Abror Narziqulov
+                  </h1>
+                  <h1 className="text-sm text-center">Grafik Dizayn</h1>
+                </div>
+                <div className="px-4 py-6 bg-white shadow">
+                  <Image
+                    className="rounded-2xl w-28 h-28"
+                    src={Sevara}
+                    alt=""
+                  />
+                  <h1 className="font-bold text-xl text-center">
+                    Sevara Jo'rayeva
+                  </h1>
+                  <h1 className="text-sm text-center">Ingliz Tili</h1>
+                </div>
+                <div className="px-4 py-6 bg-white shadow">
+                  <Image
+                    className="rounded-2xl w-28 h-28"
+                    src={Xumoyun}
+                    alt=""
+                  />
+                  <h1 className="font-bold text-xl text-center">Xumoyun</h1>
+                  <h1 className="text-sm text-center">Phython</h1>
+                </div>
+                <div className="px-4 py-6 bg-white shadow">
+                  <Image
+                    className="rounded-2xl w-28 h-28"
+                    src={Jonibek}
+                    alt=""
+                  />
+                  <h1 className="font-bold text-xl text-center">
+                    Jonibek To'rapov
+                  </h1>
+                  <h1 className="text-sm text-center">Web Dasturlash</h1>
+                </div>
+                <div className="px-4 py-6 bg-white shadow">
+                  <Image className="rounded-2xl w-28 h-28" src={Zuxra} alt="" />
+                  <h1 className="font-bold text-xl text-center">Zuxra</h1>
+                  <h1 className="text-sm text-center">Rus Tili</h1>
+                </div>
+                <div className="px-4 py-6 bg-white shadow">
+                  <Image className="rounded-2xl w-28 h-28" src={Laylo} alt="" />
+                  <h1 className="font-bold text-xl text-center">Laylo</h1>
+                  <h1 className="text-sm text-center">Call Center</h1>
+                </div>
+                <div className="px-4 py-6 bg-white shadow">
+                  <Image
+                    className="rounded-2xl w-28 h-28"
+                    src={Nigina}
+                    alt=""
+                  />
+                  <h1 className="font-bold text-xl text-center">Nigina</h1>
+                  <h1 className="text-sm text-center">Call Center</h1>
+                </div>
               </div>
             </Slider>
           </div>
@@ -550,7 +532,7 @@ export default function Card() {
           </div>
         </div>
 
-        <h1 id="#4" className="text-4xl font-bold text-center mt-8">
+        <h1 id="#3" className="text-4xl font-bold text-center mt-8">
           "IT HOUSE" o'quv markazi bitiruvchilari
         </h1>
         <div className="flex justify-center items-center mt-10">
@@ -568,7 +550,7 @@ export default function Card() {
       </div>
 
       <div
-        id="cantact"
+        id="contact"
         className="mt-16 bg-red-600 flex items-center justify-between pt-16 pb-20 px-56"
       >
         <h1 className="text-4xl font-bold text-white">

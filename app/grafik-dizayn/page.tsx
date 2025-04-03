@@ -67,11 +67,19 @@ function Page() {
               </h1>
               <div className="flex items-center gap-5 mt-14">
                 <h1 className="flex items-center gap-2">
-                  <Image className="w-7 h-7 rounded-sm" src={Photoshop} alt="" />
+                  <Image
+                    className="w-7 h-7 rounded-sm"
+                    src={Photoshop}
+                    alt=""
+                  />
                   Photoshop
                 </h1>
                 <h1 className="flex items-center gap-2">
-                  <Image className="w-7 h-7 rounded-sm" src={Illustrator} alt="" />
+                  <Image
+                    className="w-7 h-7 rounded-sm"
+                    src={Illustrator}
+                    alt=""
+                  />
                   Illustrator
                 </h1>
                 <h1 className="flex items-center gap-2">
@@ -371,8 +379,9 @@ function Page() {
                 </h1>
                 <h1 className="flex mt-6 gap-2">
                   <FaCheck />
-                  Kompyuterda har tomonlama <br />
-                  bilimlaringizni kuchaytiring
+                  Kompozitsiya, tipografiya va <br />
+                  grafika dizayn mahoratingizni <br />
+                  oshiring
                 </h1>
                 <h1 className="flex mt-6 pb-12 gap-2">
                   <FaCheck />

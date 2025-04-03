@@ -1,21 +1,17 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { FaCheck } from "react-icons/fa6";
-import SMM from "@/app/components/imgs/smm-3.png";
-import Social from "@/app/components/imgs/social.png";
-import Ism from "@/app/components/imgs/Ism.png";
+import Cyber from "@/app/components/imgs/cybersecurity-3.png";
+import Cyber2 from "@/app/components/imgs/cyber.png";
+import Temurbek from "@/app/components/imgs/temurbek.png";
 import Girl from "@/app/components/imgs/girl.png";
 import Boy from "@/app/components/imgs/Boy.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Women from "@/app/components/imgs/Women.png";
 import Bitir from "@/app/components/imgs/Bitir.png";
 import Logo from "@/app/components/imgs/logo.png";
-import Instagram from "@/app/components/imgs/Instagram.png";
-import Youtube from "@/app/components/imgs/Youtube.png";
-import TIkTok from "@/app/components/imgs/tiktok.png";
-import Telegram from "@/app/components/imgs/telegram.png";
 import Footer from "../components/footer";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import Navbar from "../navbar";
@@ -53,46 +49,41 @@ function Page() {
         <div className="">
           <div className="flex pl-56 pr-24 justify-between bg-blue-50 pb-20 w-full h-wull">
             <div className="mt-36">
-              <h1 className="text-5xl font-bold">SMM</h1>
+              <h1 className="text-5xl font-bold">Kiberxavfsizlik</h1>
               <h1 className="text-4xl mt-8 font-bold">kursi</h1>
               <h1 className="mt-16">
-                SMM (Social Media Marketing) menejerining asosiy vazifasi brend
-                yoki tashkilotning <br />
-                ijtimoiy tarmoqlardagi faoliyatini yuritish va
-                rivojlantirishdir. Quyidagi asosiy vazifalar <br />
-                SMM menejerga tegishli
+                Kiberxavfsizlik – bu kompyuterlar, tarmoqlar va ma’lumotlarni
+                turli tahdidlardan <br />
+                himoya qilish jarayoni. Internetda xakerlar, zararli dasturlar
+                va firibgarlar odamlarning <br />
+                shaxsiy ma’lumotlarini o‘g‘irlash yoki tizimlarni buzishga
+                harakat qilishadi. Bunga yo‘l <br />
+                qo‘ymaslik uchun kuchli parollar ishlatish, dasturlarni yangilab
+                turish va antivirus kabi <br />
+                xavfsizlik vositalaridan foydalanish muhim. Agar
+                kiberxavfsizlikka e’tibor berilmasa, <br />
+                ma’lumotlar yo‘qolishi, moliyaviy zarar yoki hattoki butun tizim
+                ishdan chiqishi <br />
+                mumkin. Shuning uchun hamma internetdan foydalanganda ehtiyot
+                choralarini <br />
+                ko‘rishi kerak.
               </h1>
-              <div className="flex items-center gap-5 mt-14">
-                <h1 className="flex items-center gap-2">
-                  <Image className="w-9 h-9" src={Instagram} alt="" />
-                  Instagram
-                </h1>
-                <h1 className="flex items-center gap-2">
-                  <Image className="w-9 h-9" src={Youtube} alt="" />
-                  Youtube
-                </h1>
-                <h1 className="flex items-center gap-2">
-                  <Image className="w-9 h-9" src={TIkTok} alt="" />
-                  TikTok
-                </h1>
-                <h1 className="flex items-center gap-2">
-                  <Image className="w-9 h-9" src={Telegram} alt="" />
-                  Telegram
-                </h1>
-              </div>
-              <h1 className="flex items-center gap-2 mt-8">
-                <FaCheck className="text-red-600" /> Ishga tayyorlash
+              <h1 className="flex items-center gap-2 mt-14">
+                <FaCheck className="text-red-600" />0 dan boshlab kasb
+                darajasigacha
               </h1>
               <h1 className="flex items-center gap-2">
-                <FaCheck className="text-red-600" /> Shaxsiy mentor yordami
+                <FaCheck className="text-red-600" /> SHaftada 4 kun 1.5 - 2
+                soatdan offline darslar
               </h1>
               <h1 className="flex items-center gap-2">
-                <FaCheck className="text-red-600" /> Yopiq telegram kanalda kurs
-                kuratorlari bilan ma'lumot
+                <FaCheck className="text-red-600" />
+                Telegram guruhlarda darslik materiallari domiy ravishda tashab
+                boriladi
               </h1>
               <h1 className="flex items-center gap-2">
-                <FaCheck className="text-red-600" /> Planshetsiz bajarilishi
-                mumkin, chizish talab qilinmaydi
+                <FaCheck className="text-red-600" />
+                Har oy amaliy shakldagi imtihonlar
               </h1>
               <h1 className="flex items-center gap-2">
                 <FaCheck className="text-red-600" /> Kurs yakunida sertifikat
@@ -101,33 +92,39 @@ function Page() {
             <Image
               data-aos="zoom-in"
               data-aos-duration="1000"
+              data-aos-easing="ease-out"
               className="w-[500px] h-[500px] mt-20"
-              src={SMM}
+              src={Cyber}
               alt=""
             />
           </div>
           <div className="pl-64 pr-24 mt-28">
-            <h1 className="text-4xl font-bold">SMM mutaxassisi nima qiladi?</h1>
+            <h1 className="text-4xl font-bold">
+              Kiberxavfsizlik mutaxassisi nima qiladi?
+            </h1>
             <h1 className="text-xl font-semibold mt-20">
-              SMM mutaxassisi ijtimoiy tarmoqlarda brendni rivojlantirish va
-              marketing kampaniyalarini boshqarish bilan shug‘ullanadi.
+              Kiberxavfsizlik mutaxassisi tizimlar va ma’lumotlarni
+              kiberxavflardan himoya qilish bilan shug‘ullanadi.
             </h1>
             <h1 className="text-xl font-semibold mt-8">
-              Kontent yaratish, auditoriyani jalb qilish, reklama
-              kampaniyalarini amalga oshirish, tahlil qilish va hisobotlar
-              <br />
-              tayyorlash – bularning barchasi SMM mutaxassislari tomonidan
-              amalga oshiriladi. Masalan, Facebook, <br />
-              Instagram, Twitter va boshqa ijtimoiy tarmoqlarda brendning
-              imijini yaratish, target reklama yaratish va <br />
-              foydalanuvchilar bilan muloqot qilish uchun turli vositalar va
-              texnikalardan foydalaniladi.
+              Kiberxavfsizlik mutaxassisi – bu kompyuter tizimlari va
+              ma’lumotlarni xakerlardan, viruslardan va <br />
+              firibgarlardan himoya qiladigan mutaxassis. U tarmoqlarni sinab
+              ko‘radi, zaif joylarni topadi va ularni <br />
+              mustahkamlaydi, shuningdek, hujumlarning oldini olish uchun turli
+              xavfsizlik choralari ko‘radi. Ba’zan ular <br />
+              xakerlar kabi fikrlab, tizimlarga hujum qilib ko‘rishadi, lekin
+              buning hammasi himoyani yaxshilash uchun! Bu <br />
+              kasb doimiy ravishda o‘rganishni, yechim izlashni va
+              texnologiyalar bilan ishlashni talab qiladi. Agar sen IT va <br />
+              xavfsizlikga qiziqsang, bu juda qiziqarli va talabgir kasb
+              bo‘lishi mumkin!
             </h1>
             <Image
               data-aos="zoom-in"
               data-aos-duration="1000"
-              className="rounded-2xl w-[1000px] mt-8"
-              src={Social}
+              className="rounded-2xl max-w-full my-8"
+              src={Cyber2}
               alt=""
             />
           </div>
@@ -137,132 +134,134 @@ function Page() {
               Kasbda boshlash uchun kerak bo'lgan hamma <br />
               narsani o'rgatamiz
             </h1>
-            <div className="flex mt-12 justify-between">
+            <div className="flex mt-16 justify-between">
               <div data-aos="zoom-in" data-aos-duration="1000">
                 <h1 className="flex items-center gap-2 font-bold">
-                  <IoIosCheckmarkCircle className="text-red-600 text-xl" />{" "}
-                  Kompozitsiya, algoritmlar va SMM asoslari{" "}
+                  <IoIosCheckmarkCircle className="text-red-600 text-xl" />
+                  Boshlang'ich tushunchalar, Linux operatsion <br />
+                  tizimi, Tarmoq protokollari
                 </h1>
                 <h1 className="ml-7 mt-3">
-                  Biz mashg‘ulotimizni ijtimoiy tarmoqlarda marketing <br />
-                  strategiyalari, kontent yaratish va auditoriya bilan <br />
-                  muloqot qilish asoslaridan boshlaymiz. Biz sizning <br />
-                  kreativ fikrlash qobiliyatingizni va SMM strategiyalarini
-                  <br />
-                  ishlab chiqish mahoratingizni oshirishga yordam <br />
-                  beramiz.
+                  Ethical hacker bo'lishni hohlagan har bir xodim bilishi <br />
+                  zarur bo'lgan fundamental bilimlar, Linux operatsion <br />
+                  tizimini to'liq boshqarishni o'rganib bash scripting <br />
+                  yordamida vazifalarni avtomatlashtirib linuxda ishlash <br />
+                  samaradorligingizni oshirasiz.
                 </h1>
               </div>
-              <div data-aos="zoom-in" data-aos-duration="1000">
-                <h1 className="flex items-center gap-2 font-bold">
-                  <IoIosCheckmarkCircle className="text-red-600 text-xl" /> SMM
-                  vositalari va platformalar{" "}
-                </h1>
-                <h1 className="ml-7 mt-3">
-                  Biz SMM uchun asosiy platformalar va vositalarni <br />
-                  o‘rganamiz: Instagram, Facebook, Twitter, LinkedIn va <br />
-                  TikTok. Biz analitika vositalari, reklamalar yaratish, <br />
-                  kontent rejalashtirish va tahlil qilishni batafsil ko‘rib
-                  <br />
-                  chiqamiz.
-                </h1>
-              </div>
-            </div>
-            <div className="flex mt-12 justify-between">
               <div data-aos="zoom-in" data-aos-duration="1000">
                 <h1 className="flex items-center gap-2 font-bold">
                   <IoIosCheckmarkCircle className="text-red-600 text-xl" />
                   Amaliy ko'nikmalar
                 </h1>
                 <h1 className="ml-7 mt-3">
-                  Siz kontent yaratishingiz, target reklamalar yaratish, <br />
-                  tahlil qilish va hisobotlar tayyorlash, brend <br />
-                  strategiyasini ishlab chiqish va amalga oshirishingiz <br />
-                  kerak.
+                  Siz darslar jarayonida 15 dan ortiq kiberhujumlarni <br />
+                  qanday amalga oshirishni va qanday ulardan <br />
+                  himoyalanishni ham ko'rib chiqasiz. Bularni barchasi <br />
+                  simulatsiya qilib ko'rsatiladi.
+                </h1>
+              </div>
+            </div>
+            <div className="flex mt-12 justify-between">
+              <div data-aos="zoom-in" data-aos-duration="1000">
+                <h1 className="flex items-center gap-2 font-bold">
+                  <IoIosCheckmarkCircle className="text-red-600 text-xl" />
+                  Kiberxavfsizlikdagi talab yuqori bo'lgan 5 ta <br />
+                  yunalish
+                </h1>
+                <h1 className="ml-7 mt-3">
+                  Cyber Security Specialist, Penetration Tester(Pentester),
+                  <br />
+                  Digital Forensics Analyst, Network Security Engineer, <br />
+                  Threat Intelligence Analyst, bo'yicha asosiy bilimlarga <br />
+                  ega bo'lasiz.
                 </h1>
               </div>
               <div data-aos="zoom-in" data-aos-duration="1000">
                 <h1 className="flex items-center gap-2 font-bold">
                   <IoIosCheckmarkCircle className="text-red-600 text-xl" />
-                  Yumshoq ko'nikmalar va o'zini o'zi taqdim etish
+                  Kasbiy faoliyatda muvaffaqiyat qozonish
                 </h1>
                 <h1 className="ml-7 mt-3">
-                  Kasbda muvaffaqiyat qozonish uchun SMM <br />
-                  mutaxassisi mijozlar bilan ishlash, auditoriyaga mos <br />
-                  kontent yaratish, tanqidlar bilan ishlay olish va <br />
-                  natijalarni aniq taqdim etish muhimdir.
+                  Sizga yaxshi kadr bo'lishingiz uchun kerak asosiy <br />
+                  kunikmalarni o'rganasiz, mijozlar bilan ishlash, tanqidiy
+                  <br />
+                  fikrlash, tez qaror qabul qilish shular jumlasidandir. Va
+                  <br />
+                  yana kiberxavsizlikning huquqiy jihatlarini ham <br />
+                  o'rganasiz.
                 </h1>
               </div>
             </div>
           </div>
-          <div id="mentor" className="mt-40 bg-blue-50 px-64 py-24">
+          <div id="mentor" className="mt-40 bg-blue-50 px-64 py-20">
             <h1 className="text-4xl font-bold">
-              Biz sizga matematikaning asosiy <br />
+              Biz sizga Kiberxavfsizlikning asosiy <br />
               ko'nikmalarini o'rgatamiz
             </h1>
             <div className="flex gap-3 mt-8">
               <div
                 data-aos="zoom-in"
                 data-aos-duration="1000"
-                className="shadow-2xl w-96 rounded-2xl px-4 py-24 h-full"
+                className="shadow-2xl w-96 rounded-2xl px-4 py-[147px] h-[456px]"
               >
                 <Image
                   className="rounded-full w-32 h-32 mx-auto"
-                  src={Ism}
+                  src={Temurbek}
                   alt=""
                 />
                 <h1 className="text-gray-400 text-center">Mentor</h1>
                 <h1 className="text-3xl font-bold text-center">
-                  Ism <br />
-                  Familiya
+                  Temurbek <br />
+                  Yorkulov
                 </h1>
               </div>
               <div
                 data-aos="zoom-in"
                 data-aos-duration="1000"
-                className="shadow-2xl w-full rounded-2xl px-10 py-[53px] h-full"
+                className="shadow-2xl w-full rounded-2xl px-10 pt-10 pb-32 h-full"
               >
                 <h1 className="text-gray-400">Ko'nikmalar</h1>
                 <div className="flex">
-                  <h1 className="flex gap-2 mt-9 text-lg">
+                  <h1 className="flex gap-2 mt-6 text-lg">
                     <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />{" "}
-                    Ma’lumotlarni tahlil qilish va <br />
-                    vizualizatsiyalar yaratish
+                    Full Stack Web Developer
                   </h1>
-                  <h1 className="flex gap-2 mt-9 ml-28 text-lg">
+                  <h1 className="flex gap-2 mt-6 text-lg ml-28">
                     <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />{" "}
-                    Statik va dinamik ma’lumotlar <br />
-                    tahlilini amalga oshirish
+                    Kiberxavfsizlikda suniy intellekt <br />
+                    imkoniyatlaridan foydalanish
                   </h1>
                 </div>
                 <div className="flex">
-                  <h1 className="flex gap-2 mt-9 text-lg">
+                  <h1 className="flex gap-2 mt-6 text-lg">
                     <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
-                    Kontent yaratish va joylash
+                    Linux tizimlari boshqaruvi
                   </h1>
-                  <h1 className="flex gap-2 mt-9 ml-[115px] text-lg">
+                  <h1 className="flex gap-2 mt-6 text-lg ml-28">
                     <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
-                    Auditoriya bilan ishlash
-                  </h1>
-                </div>
-                <div className="flex">
-                  <h1 className="flex gap-2 mt-9 text-lg">
-                    <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
-                    Tahlil va optimizatsiya
-                  </h1>
-                  <h1 className="flex gap-2 mt-9 text-lg ml-[167px]">
-                    <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
-                    Reklama va targ‘ibot
+                    Tarmoq xavfsizligini taminlash
                   </h1>
                 </div>
                 <div className="flex">
-                  <h1 className="flex gap-2 mt-9 text-lg">
+                  <h1 className="flex gap-2 mt-6 text-lg">
                     <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
-                    Brend imidjini shakllantirish.
+                    Penetration Tester
                   </h1>
-                  <h1 className="flex gap-2 mt-9 text-lg ml-[117px]">
+                  <h1 className="flex gap-2 mt-6 text-lg ml-44">
                     <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
-                    Yangiliklardan xabardor bo‘lish
+                    Thread Intelligence Analyst
+                  </h1>
+                </div>
+                <div className="flex">
+                  <h1 className="flex gap-2 mt-6 text-lg">
+                    <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
+                    Malumotlar bazasi tuzilmalarini <br />
+                    boshqarish
+                  </h1>
+                  <h1 className="flex gap-2 mt-6 text-lg ml-20">
+                    <IoIosCheckmarkCircle className="text-green-500 text-xl mt-1" />
+                    Code Review
                   </h1>
                 </div>
               </div>
@@ -274,7 +273,7 @@ function Page() {
               <div className="text-2xl bg-orange-600 rounded-full w-12 h-12 text-white text-center pt-2">
                 hh
               </div>
-              hh.uz ma'lumolatlariga ko'ra, SMM mutaxassisi
+              hh.uz ma'lumolatlariga ko'ra, Kiberxavfsizlik mutaxassislari
               <br />
               o'rtacha ish haqi 9 500 000 tashkil qiladi
             </h1>
@@ -295,7 +294,7 @@ function Page() {
                 data-aos-duration="1000"
                 className="bg-gray-200 rounded-3xl py-5 px-5 w-full mt-24"
               >
-                <h1 className="text-4xl font-bold text-center">15 000 000</h1>
+                <h1 className="text-4xl font-bold text-center">11 000 000</h1>
                 <h1 className="text-center mx-[60px] mt-32 flex items-center gap-2">
                   <span className="bg-white rounded-3xl px-3 py-2">Middle</span>
                   1-3 yilgacha
@@ -306,9 +305,9 @@ function Page() {
                 data-aos-duration="1000"
                 className="bg-gray-200 rounded-3xl py-5 px-5 w-full"
               >
-                <h1 className="text-4xl font-bold text-center">30 000 000</h1>
-                <h1 className="text-center mx-[85px] mt-56 flex items-center gap-2">
-                  <span className="bg-white rounded-3xl px-3 py-2">Sunior</span>
+                <h1 className="text-4xl font-bold text-center">25 000 000</h1>
+                <h1 className="text-center mx-[86px] mt-56 flex items-center gap-2">
+                  <span className="bg-white rounded-3xl px-3 py-2">Senior</span>
                   3+ yil
                 </h1>
               </div>
@@ -319,7 +318,7 @@ function Page() {
               Ushbu kurs kimlarga to'g'ri keladi
             </h1>
             <h1 className="mt-8">
-              Biz SMM yo'nalishini shu narsalarni istagan o'quvchilar uchun
+              Biz Kiberxavfsizlikni shu narsalarni istagan o'quvchilar uchun
               qildik
             </h1>
             <div className="flex justify-between mt-7 gap-5">
@@ -330,23 +329,23 @@ function Page() {
               >
                 <Image className="rounded-full w-24 h-24" src={Girl} alt="" />
                 <h1 className="text-xl font-bold mt-4">
-                  Kasbni noldan boshlab o'rganish
+                  0 Dan o'rganmoqchi bo'lganlar uchun
                 </h1>
                 <h1 className="flex mt-6 gap-2">
                   <FaCheck />
-                  Boshlash uchun maxsus bilim <br />
+                  Boshlash uchun texnik bilim <br />
                   talab etilmaydi
                 </h1>
                 <h1 className="flex mt-6 gap-2">
                   <FaCheck />
-                  Amaliy ko'nikmalarga ega <br />
-                  bo'lasiz
+                  Barcha hujum va ximoya <br />
+                  usullar amaliy tarzda <br />
+                  o'rgatiladi
                 </h1>
                 <h1 className="flex mt-6 pb-12 gap-2">
                   <FaCheck />
-                  Kelajakda ish topishga yordam <br />
-                  beradigan jozibali <br />
-                  portfolioingizni to'plang
+                  Hozirgi kundagi eng dolzarb <br />
+                  methodlarga ega bo'ling
                 </h1>
               </div>
               <div
@@ -356,23 +355,22 @@ function Page() {
               >
                 <Image className="rounded-full w-24 h-24" src={Boy} alt="" />
                 <h1 className="text-xl font-bold mt-4">
-                  Bilimlarni tizimlashtirish va kompyuter savodxonligini o'z
-                  kasbingiz qiling
+                  Kasbini o'zgartirib zamonaviy va <br />
+                  talabgir yunalishni o'rganmoqchi <br />
+                  bo'lganlar uchun
                 </h1>
                 <h1 className="flex mt-6 gap-2">
                   <FaCheck />
-                  Asosiy bilimlaringizni <br />
-                  chuqurlashtiring
+                  Kelajak kasbini egallang
                 </h1>
                 <h1 className="flex mt-6 gap-2">
                   <FaCheck />
-                  SMM strategiyalari, algoritmlar <br />va ma’lumotlar tahlil <br />
-                  mahoratingizni oshiring.
+                  Ish topish imkoniyatlari keng
                 </h1>
                 <h1 className="flex mt-6 pb-12 gap-2">
                   <FaCheck />
-                  Portfolioingizni yangi keyslar <br />
-                  bilan to'ldiring
+                  Masofaviy va mustaqil ishlash <br />
+                  imkoniyati
                 </h1>
               </div>
               <div
@@ -381,24 +379,22 @@ function Page() {
                 className="bg-gray-300 rounded-2xl px-3 py-8 w-full"
               >
                 <Image className="rounded-full w-24 h-24" src={Women} alt="" />
-                <h1 className="text-xl font-bold mt-4">
-                  Marketolog, muharrir va boshqa <br />
-                  kasblar uchun qo'shimcha oling
+                <h1 className="text-xl font-bold mt-4">Biznes egalari uchun</h1>
+                <h1 className="flex mt-6 gap-2">
+                  <FaCheck />
+                  O'z biznesingizni o'zingiz <br />
+                  himoya qiling
                 </h1>
                 <h1 className="flex mt-6 gap-2">
                   <FaCheck />
-                  Siz biznes vazifalari hal qila <br />
-                  olasiz
-                </h1>
-                <h1 className="flex mt-6 gap-2">
-                  <FaCheck />
-                  Ko'proq daromad olasiz
+                  Kiberhujumlar orqali moliyaviy <br />
+                  yuqotishlarni oldini oling
                 </h1>
                 <h1 className="flex mt-6 pb-12 gap-2">
                   <FaCheck />
-                  Boshqa hamkasblarga <br />
-                  qaraganda qo'shimcha bilimga <br />
-                  ega bo'ling
+                  Mijozlarning maxfiy <br />
+                  malumotlarini himoya qilishni <br />
+                  o'rganing
                 </h1>
               </div>
             </div>
@@ -432,7 +428,11 @@ function Page() {
               data-aos-duration="1000"
               className="bg-white rounded-2xl px-4 py-5 w-96"
             >
-              <div className="flex items-center gap-2 ml-5">
+              <div
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                className="flex items-center gap-2 ml-5"
+              >
                 <Image className="w-12 h-12" src={Logo} alt="" />
                 <h1 className="font-bold text-2xl">IT HOUSE</h1>
               </div>

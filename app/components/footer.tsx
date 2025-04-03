@@ -18,16 +18,16 @@ function Footer() {
           <a href="/">Bosh sahifa</a>
         </li>
         <li className="mt-2">
-          <a href="#mentors">Mentorlar</a>
+          <a href="/#mentors">Mentorlar</a>
         </li>
         <li className="mt-2">
-          <a href="#courses">Kurslar</a>
+          <a href="/#courses">Kurslar</a>
         </li>
         <li className="mt-2">
-          <a href="#3">Bitiruvchilar</a>
+          <a href="/#3">Bitiruvchilar</a>
         </li>
         <li className="mt-2">
-          <a href="#contact">Aloqa</a>
+          <a href="/#contact">Aloqa</a>
         </li>
       </ul>
       <ul>
@@ -39,9 +39,7 @@ function Footer() {
           <Link href={"/kids"}>Foundation Kids</Link>
         </li>
         <li className="mt-2">
-          <Link href={"/grafik-dizayn"}>
-            Grafik Dizayn
-          </Link>
+          <Link href={"/grafik-dizayn"}>Grafik Dizayn</Link>
         </li>
         <li className="mt-2">
           <Link href={"/frontend"}>Web Frontend</Link>
@@ -53,15 +51,15 @@ function Footer() {
           <Link href={"/python"}>Phyton</Link>
         </li>
         <li className="mt-2">
-          <Link href={"https://ai.ithouseedu.uz/"}>AI, Su'niy Intellekt</Link>
+          <Link href={"/ai"}>AI, Su'niy Intellekt</Link>
         </li>
       </ul>
       <ul className="mt-14">
         <li>
-          <Link href={"http://ingliztili.ithouseedu.uz/"}>Ingliz Tili</Link>
+          <Link href={"/ingliztili"}>Ingliz Tili</Link>
         </li>
         <li className="mt-2">
-          <Link href={"https://rustili.ithouseedu.uz/"}>Rus Tili</Link>
+          <Link href={"/rustili"}>Rus Tili</Link>
         </li>
         <li className="mt-2">
           <Link href={"/smm"}>SMM</Link>
@@ -70,9 +68,7 @@ function Footer() {
           <Link href={"/math"}>Matemetika</Link>
         </li>
         <li className="mt-2">
-          <Link href={"https://kiberxavfsizlik.ithouseedu.uz/"}>
-            Kiberxavfsizlik
-          </Link>
+          <Link href={"/kiberxavfsizlik"}>Kiberxavfsizlik</Link>
         </li>
         <li className="mt-2">
           <Link href={"/interyer"}>Interyer Dizayn</Link>
@@ -110,10 +106,14 @@ function Footer() {
           </Link>
         </li>
         <li className="mt-2">
-          <Link className="flex items-center gap-2" target="_blank" href={""}>
+          <a
+            className="flex items-center gap-2"
+            target="_blank"
+            href="tel: +998781137801"
+          >
             <FaPhoneAlt className="text-red-600 hover:text-black" /> +998 78
             113-78-01
-          </Link>
+          </a>
         </li>
         <li className="mt-2 mb-20">
           <a
