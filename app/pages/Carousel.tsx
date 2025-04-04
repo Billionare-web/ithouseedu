@@ -209,9 +209,9 @@ export default function Card() {
 
   return (
     <div>
-      <div className="pt-32 px-56">
+      <div className="pt-32 px-56 md:px-5">
         <Carousel className="h-[500px]">
-          <CarouselContent className="max-sm:flex-col max-sm:gap-5">
+          <CarouselContent className="max-md:flex-col max-md:gap-5">
             {items.map((item, index) => (
               <CarouselItem
                 key={index}
@@ -225,7 +225,7 @@ export default function Card() {
                     alt="Kurs rasmi"
                     width={400}
                     height={350}
-                    className="rounded-lg"
+                    className="rounded-lg max-md:flex-none"
                   />
                   <h1 className="text-5xl font-bold mb-3">{item.text}</h1>
                 </div>
@@ -234,11 +234,11 @@ export default function Card() {
           </CarouselContent>
         </Carousel>
 
-        <h1 className="text-center text-4xl font-bold mt-12">
+        <h1 className="text-center text-4xl font-bold mt-12 max-md:flex-none">
           IT HOUSE qanday ishlaydi?
         </h1>
 
-        <div className="flex items-center justify-between mt-20 gap-3">
+        <div className="flex flex-col md:flex-row items-center justify-between mt-10 md:mt-20 gap-6">
           {[
             {
               id: 1,
@@ -261,15 +261,15 @@ export default function Card() {
           ].map((item) => (
             <div
               key={item.id}
-              className="shadow-2xl rounded-2xl px-3 py-5 w-[350px] h-[450px] flex flex-col justify-between relative overflow-hidden"
+              className="shadow-2xl rounded-2xl px-4 py-6 w-full max-w-[350px] h-[450px] flex flex-col justify-between relative overflow-hidden"
             >
-              <div className="flex gap-5">
+              <div className="flex gap-4 items-center">
                 <h1 className="bg-red-600 rounded-full w-10 h-10 text-white text-center px-3 py-2 font-bold">
                   {item.id}
                 </h1>
-                <h1 className="text-2xl font-bold">{item.text}</h1>
+                <h1 className="text-xl md:text-2xl font-bold">{item.text}</h1>
               </div>
-              <div className="relative w-80 h-80 mx-auto">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
                 <Image
                   className={`w-full h-full transition-transform duration-500 ease-in-out hover:scale-110 ${item.rotate}`}
                   src={item.src}
@@ -280,16 +280,16 @@ export default function Card() {
           ))}
         </div>
 
-        <div className="flex px-6 gap-5 justify-center mt-32">
-          <div className="shadow-2xl px-8 py-6 rounded-2xl">
+        <div className="flex flex-col md:flex-row px-4 md:px-6 gap-6 justify-center mt-16 md:mt-32">
+          <div className="shadow-2xl px-6 py-5 rounded-2xl w-full max-w-xs mx-auto">
             <h1 className="text-center">Umumiy o'quvchilar soni</h1>
             <Counter target={6453} />
           </div>
-          <div className="shadow-2xl px-8 py-6 rounded-2xl">
+          <div className="shadow-2xl px-6 py-5 rounded-2xl w-full max-w-xs mx-auto">
             <h1 className="text-center">Yozilgan darslar soni</h1>
             <Counter target={245} />
           </div>
-          <div className="shadow-2xl px-8 py-6 rounded-2xl">
+          <div className="shadow-2xl px-6 py-5 rounded-2xl w-full max-w-xs mx-auto">
             <h1 className="text-center">O'rtacha jamoaviy tajriba</h1>
             <Counter target={5} suffix=" yil" />
           </div>
@@ -301,10 +301,10 @@ export default function Card() {
           </h1>
           <div className="">
             <Slider {...settings}>
-              <div className="flex items-center gap-5">
-                <div className="px-4 py-6 bg-white shadow">
+              <div className="flex items-center gap-5 max-lg:flex-col max-lg:px-4">
+                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
                   <Image
-                    className="rounded-2xl w-28 h-28"
+                    className="rounded-2xl w-28 h-28 mx-auto"
                     src={Temurbek}
                     alt=""
                   />
@@ -313,9 +313,9 @@ export default function Card() {
                   </h1>
                   <h1 className="text-sm text-center">Kiberxavfsizlik</h1>
                 </div>
-                <div className="px-4 py-6 bg-white shadow">
+                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
                   <Image
-                    className="rounded-2xl w-28 h-28"
+                    className="rounded-2xl w-28 h-28 mx-auto"
                     src={Nodirbek}
                     alt=""
                   />
@@ -324,9 +324,9 @@ export default function Card() {
                   </h1>
                   <h1 className="text-sm text-center">AI, Foundation Kids</h1>
                 </div>
-                <div className="px-4 py-6 bg-white shadow">
+                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
                   <Image
-                    className="rounded-2xl w-28 h-28"
+                    className="rounded-2xl w-28 h-28 mx-auto"
                     src={Jaloliddin}
                     alt=""
                   />
@@ -335,20 +335,20 @@ export default function Card() {
                   </h1>
                   <h1 className="text-sm text-center">Web Dasturlash</h1>
                 </div>
-                <div className="px-4 py-6 bg-white shadow">
+                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
                   <Image
-                    className="rounded-2xl w-28 h-28"
+                    className="rounded-2xl w-28 h-28 mx-auto"
                     src={Hikmatillo}
                     alt=""
                   />
                   <h1 className="font-bold text-xl text-center">
-                    HIkmatillo Bobomurodov
+                    Hikmatillo Bobomurodov
                   </h1>
                   <h1 className="text-sm text-center">Matematika</h1>
                 </div>
-                <div className="px-4 py-6 bg-white shadow">
+                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
                   <Image
-                    className="rounded-2xl w-28 h-28"
+                    className="rounded-2xl w-28 h-28 mx-auto"
                     src={Mahmudjon}
                     alt=""
                   />
@@ -357,16 +357,20 @@ export default function Card() {
                   </h1>
                   <h1 className="text-sm text-center">Foundation</h1>
                 </div>
-                <div className="px-4 py-6 bg-white shadow">
-                  <Image className="rounded-2xl w-28 h-28" src={Abror} alt="" />
+                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
+                  <Image
+                    className="rounded-2xl w-28 h-28 mx-auto"
+                    src={Abror}
+                    alt=""
+                  />
                   <h1 className="font-bold text-xl text-center">
                     Abror Narziqulov
                   </h1>
                   <h1 className="text-sm text-center">Grafik Dizayn</h1>
                 </div>
-                <div className="px-4 py-6 bg-white shadow">
+                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
                   <Image
-                    className="rounded-2xl w-28 h-28"
+                    className="rounded-2xl w-28 h-28 mx-auto"
                     src={Sevara}
                     alt=""
                   />
@@ -375,18 +379,18 @@ export default function Card() {
                   </h1>
                   <h1 className="text-sm text-center">Ingliz Tili</h1>
                 </div>
-                <div className="px-4 py-6 bg-white shadow">
+                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
                   <Image
-                    className="rounded-2xl w-28 h-28"
+                    className="rounded-2xl w-28 h-28 mx-auto"
                     src={Xumoyun}
                     alt=""
                   />
                   <h1 className="font-bold text-xl text-center">Xumoyun</h1>
                   <h1 className="text-sm text-center">Phython</h1>
                 </div>
-                <div className="px-4 py-6 bg-white shadow">
+                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
                   <Image
-                    className="rounded-2xl w-28 h-28"
+                    className="rounded-2xl w-28 h-28 mx-auto"
                     src={Jonibek}
                     alt=""
                   />
@@ -395,19 +399,27 @@ export default function Card() {
                   </h1>
                   <h1 className="text-sm text-center">Web Dasturlash</h1>
                 </div>
-                <div className="px-4 py-6 bg-white shadow">
-                  <Image className="rounded-2xl w-28 h-28" src={Zuxra} alt="" />
+                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
+                  <Image
+                    className="rounded-2xl w-28 h-28 mx-auto"
+                    src={Zuxra}
+                    alt=""
+                  />
                   <h1 className="font-bold text-xl text-center">Zuxra</h1>
                   <h1 className="text-sm text-center">Rus Tili</h1>
                 </div>
-                <div className="px-4 py-6 bg-white shadow">
-                  <Image className="rounded-2xl w-28 h-28" src={Laylo} alt="" />
+                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
+                  <Image
+                    className="rounded-2xl w-28 h-28 mx-auto"
+                    src={Laylo}
+                    alt=""
+                  />
                   <h1 className="font-bold text-xl text-center">Laylo</h1>
                   <h1 className="text-sm text-center">Call Center</h1>
                 </div>
-                <div className="px-4 py-6 bg-white shadow">
+                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
                   <Image
-                    className="rounded-2xl w-28 h-28"
+                    className="rounded-2xl w-28 h-28 mx-auto"
                     src={Nigina}
                     alt=""
                   />
@@ -420,7 +432,10 @@ export default function Card() {
         </div>
 
         <h1 className="text-4xl font-bold">Kurslar</h1>
-        <div id="courses" className="grid grid-cols-3 gap-7 mt-7">
+        <div
+          id="courses"
+          className="grid grid-cols-3 gap-7 mt-7 max-md:grid-cols-1"
+        >
           {courses.map((course) => (
             <div
               key={course.id}
@@ -428,19 +443,19 @@ export default function Card() {
               onMouseEnter={() => setHovered(course.id)}
               onMouseLeave={() => setHovered(null)}
             >
-              <div className="flex items-center justify-between text-lg font-bold">
+              <div className="flex items-center justify-between text-lg font-bold max-md:flex-col">
                 <Image
-                  className="w-28 h-28"
+                  className="w-28 h-28 mx-auto"
                   src={course.image}
                   alt={course.name}
                 />
-                <div>
+                <div className="text-center max-md:mt-3">
                   <h1>{course.name}</h1>
                   <h1>{course.duration}</h1>
                 </div>
               </div>
               <div>
-                <PiCursorFill className="text-red-600 text-2xl ml-52 rotate-12" />
+                <PiCursorFill className="text-red-600 text-2xl ml-52 rotate-12 max-md:ml-0" />
               </div>
               {/* Modal */}
               {hovered === course.id && (
@@ -455,8 +470,8 @@ export default function Card() {
         <h1 className="text-4xl font-bold mt-8">
           Nima uchun "IT HOUSE" da o'qish kerak?
         </h1>
-        <div className="flex items-center justify-between mt-9 gap-3">
-          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl">
+        <div className="flex items-center justify-between mt-9 gap-3 max-md:flex-col">
+          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
               src={TypePerson}
@@ -467,7 +482,7 @@ export default function Card() {
               24/7 formatida tun-u kun ishlaydigan bepul coworking va wifi.
             </h1>
           </div>
-          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl">
+          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
               src={Cap}
@@ -480,8 +495,8 @@ export default function Card() {
             </h1>
           </div>
         </div>
-        <div className="flex items-center justify-between mt-6 gap-3">
-          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl">
+        <div className="flex items-center justify-between mt-6 gap-3 max-md:flex-col">
+          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
               src={Prize}
@@ -493,7 +508,7 @@ export default function Card() {
               musobaqalar.
             </h1>
           </div>
-          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl">
+          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
               src={Coins}
@@ -505,8 +520,8 @@ export default function Card() {
             </h1>
           </div>
         </div>
-        <div className="flex items-center justify-between mt-6 gap-3">
-          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl">
+        <div className="flex items-center justify-between mt-6 gap-3 max-md:flex-col">
+          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
               src={Tasks}
@@ -518,7 +533,7 @@ export default function Card() {
               o‘quvchilarga amaliyot taklif qilish kafolatini beradi.
             </h1>
           </div>
-          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl">
+          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
               src={Certificate}
@@ -536,7 +551,12 @@ export default function Card() {
           "IT HOUSE" o'quv markazi bitiruvchilari
         </h1>
         <div className="flex justify-center items-center mt-10">
-          <video width="800" height="450" controls>
+          <video
+            className="max-md:w-full max-md:mx-7 max-md:h-[250px]"
+            width="800"
+            height="450"
+            controls
+          >
             <source
               src="https://www.youtube.com/watch?v=TBlDJTgiFZU"
               type="video/mp4"
@@ -544,21 +564,21 @@ export default function Card() {
           </video>
         </div>
 
-        <h1 className="text-4xl font-bold text-center mt-16">
+        <h1 className="text-4xl font-bold text-center mt-16 max-sm:flex-none">
           <span className="text-red-600">IT HOUSE</span> - KELAJAK SHU YERDA
         </h1>
       </div>
 
       <div
         id="contact"
-        className="mt-16 bg-red-600 flex items-center justify-between pt-16 pb-20 px-56"
+        className="mt-16 bg-red-600 flex items-center justify-between pt-16 pb-20 px-8 max-md:flex-col"
       >
-        <h1 className="text-4xl font-bold text-white">
+        <h1 className="text-4xl font-bold text-white sm:flex-none">
           Kurslar haqida to'liq ma'lumotga <br />
           ega bo'lishni istasangiz <br />
           formani to'ldiring
         </h1>
-        <div className="bg-white rounded-2xl px-4 py-5 w-96">
+        <div className="bg-white rounded-2xl px-4 py-5 w-96 max-md:w-full max-md:px-6">
           <div className="flex items-center gap-2 ml-5">
             <Image className="w-12 h-12" src={Logo} alt="" />
             <h1 className="font-bold text-2xl">IT HOUSE</h1>
@@ -584,7 +604,7 @@ export default function Card() {
             />
             <button
               type="submit"
-              className="bg-gray-500 w-48 h-14 px-7 py-1 rounded-xl text-lg font-bold text-white mt-20 mx-20 mb-12"
+              className="bg-gray-500 w-48 h-14 px-7 py-1 rounded-xl text-lg font-bold text-white mt-20 mx-20 mb-12 max-md:w-full max-md:mx-0"
             >
               Yuborish
             </button>

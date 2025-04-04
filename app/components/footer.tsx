@@ -11,8 +11,8 @@ import { IoLocationSharp } from "react-icons/io5";
 
 function Footer() {
   return (
-    <div className="px-44 flex justify-between pt-20">
-      <ul>
+    <div className="px-10 max-lg:px-6 max-md:px-4 flex flex-wrap justify-between pt-20">
+      <ul className="w-full max-md:w-full">
         <h1 className="text-2xl font-semibold">Ma'lumotlar</h1>
         <li className="mt-6">
           <a href="/">Bosh sahifa</a>
@@ -30,7 +30,8 @@ function Footer() {
           <a href="/#contact">Aloqa</a>
         </li>
       </ul>
-      <ul>
+
+      <ul className="w-full max-md:w-full mt-12 max-md:mt-8">
         <h1 className="text-2xl font-semibold">Yo'nalishlar</h1>
         <li className="mt-6">
           <Link href={"/foundation"}>Foundation</Link>
@@ -54,7 +55,8 @@ function Footer() {
           <Link href={"/ai"}>AI, Su'niy Intellekt</Link>
         </li>
       </ul>
-      <ul className="mt-14">
+
+      <ul className="w-full max-md:w-full mt-12 max-md:mt-8">
         <li>
           <Link href={"/ingliztili"}>Ingliz Tili</Link>
         </li>
@@ -74,7 +76,8 @@ function Footer() {
           <Link href={"/interyer"}>Interyer Dizayn</Link>
         </li>
       </ul>
-      <ul>
+
+      <ul className="w-full max-md:w-full mt-12 max-md:mt-8">
         <h1 className="text-2xl font-semibold">Aloqa</h1>
         <li className="mt-5">
           Bizning ijtimoiy tarmoqlarimizga obuna <br />
