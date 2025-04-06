@@ -209,7 +209,7 @@ export default function Card() {
 
   return (
     <div>
-      <div className="pt-32 px-56 md:px-5">
+      <div className="pt-32 mx-56 max-md:mx-5">
         <Carousel className="h-[500px]">
           <CarouselContent className="max-md:flex-col max-md:gap-5">
             {items.map((item, index) => (
@@ -225,9 +225,19 @@ export default function Card() {
                     alt="Kurs rasmi"
                     width={400}
                     height={350}
-                    className="rounded-lg max-md:flex-none"
+                    className="rounded-lg max-md:hidden"
                   />
-                  <h1 className="text-5xl font-bold mb-3">{item.text}</h1>
+                  <div className="flex-col gap-9">
+                    <h1 className="text-5xl font-bold mb-3 max-md:text-3xl">
+                      {item.text}
+                    </h1>
+                    <a
+                      href="#courses"
+                      className="bg-red-600 px-14 py-3 text-white font-bold rounded-lg text-xl mt-56 max-md:hidden"
+                    >
+                      Batafsil
+                    </a>
+                  </div>
                 </div>
               </CarouselItem>
             ))}
@@ -261,13 +271,15 @@ export default function Card() {
           ].map((item) => (
             <div
               key={item.id}
-              className="shadow-2xl rounded-2xl px-4 py-6 w-full max-w-[350px] h-[450px] flex flex-col justify-between relative overflow-hidden"
+              className="shadow-2xl rounded-2xl mx-4 py-6 w-full h-[450px] flex flex-col justify-between"
             >
-              <div className="flex gap-4 items-center">
+              <div className="flex gap-4 items-center px-6">
                 <h1 className="bg-red-600 rounded-full w-10 h-10 text-white text-center px-3 py-2 font-bold">
                   {item.id}
                 </h1>
-                <h1 className="text-xl md:text-2xl font-bold">{item.text}</h1>
+                <h1 className="text-xl max-md:text-3xl font-bold">
+                  {item.text}
+                </h1>
               </div>
               <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
                 <Image
@@ -280,7 +292,7 @@ export default function Card() {
           ))}
         </div>
 
-        <div className="flex flex-col md:flex-row px-4 md:px-6 gap-6 justify-center mt-16 md:mt-32">
+        <div className="flex flex-col md:flex-row px-4 md:mx-6 gap-6 justify-center mt-16 md:mt-32">
           <div className="shadow-2xl px-6 py-5 rounded-2xl w-full max-w-xs mx-auto">
             <h1 className="text-center">Umumiy o'quvchilar soni</h1>
             <Counter target={6453} />
@@ -295,8 +307,9 @@ export default function Card() {
           </div>
         </div>
 
-        <div className="w-full flex flex-col items-center mt-8">
-          <h1 id="mentors" className="text-4xl font-bold">
+        <div id="mentors" className="mt-12 mb-12 bg-white w-full h-12"></div>
+        <div className="w-full flex flex-col items-center max-md:hidden">
+          <h1 className="text-4xl font-bold">
             Bizning Jamoa
           </h1>
           <div className="">
@@ -431,11 +444,9 @@ export default function Card() {
           </div>
         </div>
 
+        <div id="courses" className="mt-12 mb-12 bg-white w-full h-12"></div>
         <h1 className="text-4xl font-bold">Kurslar</h1>
-        <div
-          id="courses"
-          className="grid grid-cols-3 gap-7 mt-7 max-md:grid-cols-1"
-        >
+        <div className="grid grid-cols-3 gap-7 mt-7 max-md:grid-cols-1">
           {courses.map((course) => (
             <div
               key={course.id}
@@ -443,19 +454,19 @@ export default function Card() {
               onMouseEnter={() => setHovered(course.id)}
               onMouseLeave={() => setHovered(null)}
             >
-              <div className="flex items-center justify-between text-lg font-bold max-md:flex-col">
+              <div className="flex items-center justify-between text-lg font-bold">
                 <Image
                   className="w-28 h-28 mx-auto"
                   src={course.image}
                   alt={course.name}
                 />
-                <div className="text-center max-md:mt-3">
-                  <h1>{course.name}</h1>
+                <div className="max-md:mt-3">
+                  <h1 className="text-center">{course.name}</h1>
                   <h1>{course.duration}</h1>
                 </div>
               </div>
               <div>
-                <PiCursorFill className="text-red-600 text-2xl ml-52 rotate-12 max-md:ml-0" />
+                <PiCursorFill className="text-red-600 text-2xl ml-64 rotate-12 max-md:ml-72" />
               </div>
               {/* Modal */}
               {hovered === course.id && (
@@ -467,10 +478,10 @@ export default function Card() {
           ))}
         </div>
 
-        <h1 className="text-4xl font-bold mt-8">
+        <h1 className="text-4xl font-bold mt-20 max-md:hidden">
           Nima uchun "IT HOUSE" da o'qish kerak?
         </h1>
-        <div className="flex items-center justify-between mt-9 gap-3 max-md:flex-col">
+        <div className="flex items-center justify-between mt-9 gap-3 max-md:flex-col max-md:mt-32">
           <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
@@ -521,7 +532,7 @@ export default function Card() {
           </div>
         </div>
         <div className="flex items-center justify-between mt-6 gap-3 max-md:flex-col">
-          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
+          <div className="shadow-2xl w-[520px] h-40 max-md:h-full pl-6 pr-10 pt-4 pb-10 max-md:pb-3 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
               src={Tasks}
@@ -533,7 +544,7 @@ export default function Card() {
               o‘quvchilarga amaliyot taklif qilish kafolatini beradi.
             </h1>
           </div>
-          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
+          <div className="shadow-2xl w-[520px] h-40 max-md:h-full pl-6 pr-10 pt-4 pb-10 max-md:pb-3 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
               src={Certificate}
@@ -547,10 +558,13 @@ export default function Card() {
           </div>
         </div>
 
-        <h1 id="#3" className="text-4xl font-bold text-center mt-8">
+        <h1
+          id="#3"
+          className="text-4xl font-bold text-center mt-8 max-md:hidden"
+        >
           "IT HOUSE" o'quv markazi bitiruvchilari
         </h1>
-        <div className="flex justify-center items-center mt-10">
+        <div className="flex justify-center items-center mt-10 max-md:hidden">
           <video
             className="max-md:w-full max-md:mx-7 max-md:h-[250px]"
             width="800"
@@ -564,16 +578,16 @@ export default function Card() {
           </video>
         </div>
 
-        <h1 className="text-4xl font-bold text-center mt-16 max-sm:flex-none">
+        <h1 className="text-4xl font-bold text-center mt-16 max-md:hidden">
           <span className="text-red-600">IT HOUSE</span> - KELAJAK SHU YERDA
         </h1>
       </div>
 
       <div
         id="contact"
-        className="mt-16 bg-red-600 flex items-center justify-between pt-16 pb-20 px-8 max-md:flex-col"
+        className="mt-16 bg-red-600 flex items-center justify-between pt-32 pb-20 px-8 max-md:flex-col"
       >
-        <h1 className="text-4xl font-bold text-white sm:flex-none">
+        <h1 className="text-4xl font-bold text-white max-md:hidden">
           Kurslar haqida to'liq ma'lumotga <br />
           ega bo'lishni istasangiz <br />
           formani to'ldiring

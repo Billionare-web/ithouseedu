@@ -46,11 +46,11 @@ function Page() {
     <div>
       <div>
         <Navbar />
-        <div className="">
-          <div className="flex pl-56 pr-24 justify-between bg-blue-50 pb-20 w-full h-wull">
+        <div>
+          <div className="flex pl-56 pr-24 justify-between bg-blue-50 pb-20 w-full h-full max-md:px-5 max-md:pl-7">
             <div className="mt-36">
-              <h1 className="text-5xl font-bold">Matematika</h1>
-              <h1 className="text-4xl mt-8 font-bold">kursi</h1>
+              <h1 className="text-5xl font-bold max-md:text-4xl">Matematika</h1>
+              <h1 className="text-4xl mt-8 font-bold max-md:3xl">kursi</h1>
               <h1 className="mt-16">
                 Noldan matematik mutaxassisiga aylaning. Algebra, geometriya,
                 matematik <br />
@@ -83,12 +83,12 @@ function Page() {
             <Image
               data-aos="zoom-in"
               data-aos-duration="1000"
-              className="w-[500px] h-[500px] mt-20"
+              className="w-[500px] h-[500px] mt-20 max-md:hidden"
               src={Maths}
-              alt=""
+              alt="Math Img"
             />
           </div>
-          <div className="pl-64 pr-24 mt-28">
+          <div className="pl-64 pr-24 mt-28 max-md:pl-5 max-md:pr-7">
             <h1 className="text-4xl font-bold">
               Matematika mutaxassisi nima qiladi?
             </h1>
@@ -113,12 +113,12 @@ function Page() {
             />
           </div>
           <div id="1" className="mt-12 mb-12 bg-white w-full h-12"></div>
-          <div className="px-64">
+          <div className="px-64 max-md:px-5">
             <h1 className="text-4xl font-bold">
               Kasbda boshlash uchun kerak bo'lgan hamma <br />
               narsani o'rgatamiz
             </h1>
-            <div className="flex mt-12 justify-between">
+            <div className="flex mt-12 justify-between max-md:flex-col">
               <div data-aos="zoom-in" data-aos-duration="1000">
                 <h1 className="flex items-center gap-2 font-bold">
                   <IoIosCheckmarkCircle className="text-red-600 text-xl" />{" "}
@@ -145,7 +145,7 @@ function Page() {
                 </h1>
               </div>
             </div>
-            <div className="flex mt-12 justify-between">
+            <div className="flex mt-12 justify-between max-md:flex-col">
               <div data-aos="zoom-in" data-aos-duration="1000">
                 <h1 className="flex items-center gap-2 font-bold">
                   <IoIosCheckmarkCircle className="text-red-600 text-xl" />
@@ -173,7 +173,7 @@ function Page() {
               </div>
             </div>
           </div>
-          <div id="mentor" className="mt-28 bg-blue-50 px-64 py-20">
+          <div id="mentor" className="mt-28 bg-blue-50 px-64 py-20 max-md:px-5">
             <h1 className="text-4xl font-bold">
               Biz sizga matematikaning asosiy <br />
               ko'nikmalarini o'rgatamiz
@@ -198,7 +198,7 @@ function Page() {
               <div
                 data-aos="zoom-in"
                 data-aos-duration="1000"
-                className="shadow-2xl w-full rounded-2xl px-10 py-10 h-full"
+                className="shadow-2xl w-full rounded-2xl px-10 py-10 h-full max-md:hidden"
               >
                 <h1 className="text-gray-400">Ko'nikmalar</h1>
                 <div className="flex">
@@ -257,7 +257,7 @@ function Page() {
               </div>
             </div>
           </div>
-          <div className="px-64 py-14">
+          <div className="px-64 py-14 max-md:px-5">
             <h1 className="text-4xl font-bold">Tajriba bilan daromad oshadi</h1>
             <h1 className="text-sm mt-16 font-bold flex gap-2 items-center text-gray-400">
               <div className="text-2xl bg-orange-600 rounded-full w-12 h-12 text-white text-center pt-2">
@@ -267,11 +267,11 @@ function Page() {
               <br />
               o'rtacha ish haqi 9 500 000 tashkil qiladi
             </h1>
-            <div className="flex gap-3">
+            <div className="flex gap-3 max-md:flex-col">
               <div
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                className="bg-gray-200 rounded-3xl py-5 px-5 w-full mt-48"
+                className="bg-gray-200 rounded-3xl py-5 px-5 w-full mt-48 max-md:mt-10"
               >
                 <h1 className="text-4xl font-bold text-center">3 500 000</h1>
                 <h1 className="text-center mx-[71px] mt-8 flex items-center gap-2">
@@ -282,7 +282,7 @@ function Page() {
               <div
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                className="bg-gray-200 rounded-3xl py-5 px-5 w-full mt-24"
+                className="bg-gray-200 rounded-3xl py-5 px-5 w-full mt-24 max-md:mt-0"
               >
                 <h1 className="text-4xl font-bold text-center">8 000 000</h1>
                 <h1 className="text-center mx-[60px] mt-32 flex items-center gap-2">
@@ -303,7 +303,7 @@ function Page() {
               </div>
             </div>
           </div>
-          <div className="px-64 mt-10">
+          <div className="px-64 mt-10 max-md:px-5">
             <h1 className="text-4xl font-bold">
               Ushbu kurs kimlarga to'g'ri keladi
             </h1>
@@ -311,7 +311,7 @@ function Page() {
               Biz Grafik Dizaynerlikni shu narsalarni istagan o'quvchilar uchun
               qildik
             </h1>
-            <div className="flex justify-between mt-7 gap-5">
+            <div className="flex justify-between mt-7 gap-5 max-md:flex-col">
               <div
                 data-aos="zoom-in"
                 data-aos-duration="1000"
@@ -394,7 +394,7 @@ function Page() {
             </div>
           </div>
           <div id="3" className="mt-12 mb-12 bg-white w-full h-12"></div>
-          <div className="px-64">
+          <div className="px-64 max-md:px-5">
             <h1 className="text-4xl font-bold">Bizning Bitiruvchilar</h1>
             <Image
               data-aos="zoom-in"
@@ -406,12 +406,12 @@ function Page() {
           </div>
           <div
             id="contact"
-            className="bg-red-600 flex items-center justify-between pt-32 mt-28 pb-20 px-56"
+            className="bg-red-600 flex items-center justify-between pt-32 mt-28 pb-20 px-56 max-md:px-5 max-md:pr-5"
           >
             <h1
               data-aos="zoom-in"
               data-aos-duration="1000"
-              className="text-4xl font-bold text-white"
+              className="text-4xl font-bold text-white max-md:hidden"
             >
               Kurslar haqida to'liq ma'lumotga <br />
               ega bo'lishni istasangiz <br />
@@ -420,9 +420,13 @@ function Page() {
             <div
               data-aos="zoom-in"
               data-aos-duration="1000"
-              className="bg-white rounded-2xl px-4 py-5 w-96"
+              className="bg-white rounded-2xl px-4 py-5 w-96 max-md:w-[361px]"
             >
-              <div className="flex items-center gap-2 ml-5">
+              <div
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                className="flex items-center gap-2 ml-5"
+              >
                 <Image className="w-12 h-12" src={Logo} alt="" />
                 <h1 className="font-bold text-2xl">IT HOUSE</h1>
               </div>

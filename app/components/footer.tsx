@@ -12,49 +12,51 @@ import { IoLocationSharp } from "react-icons/io5";
 function Footer() {
   return (
     <div className="px-10 max-lg:px-6 max-md:px-4 flex flex-wrap justify-between pt-20">
-      <ul className="w-full max-md:w-full">
-        <h1 className="text-2xl font-semibold">Ma'lumotlar</h1>
-        <li className="mt-6">
-          <a href="/">Bosh sahifa</a>
-        </li>
-        <li className="mt-2">
-          <a href="/#mentors">Mentorlar</a>
-        </li>
-        <li className="mt-2">
-          <a href="/#courses">Kurslar</a>
-        </li>
-        <li className="mt-2">
-          <a href="/#3">Bitiruvchilar</a>
-        </li>
-        <li className="mt-2">
-          <a href="/#contact">Aloqa</a>
-        </li>
-      </ul>
+      <div className="max-md:flex max-md:gap-16">
+        <ul className="w-full max-md:w-full">
+          <h1 className="text-2xl font-semibold">Ma'lumotlar</h1>
+          <li className="mt-6">
+            <a href="/">Bosh sahifa</a>
+          </li>
+          <li className="mt-2">
+            <a href="/#mentors">Mentorlar</a>
+          </li>
+          <li className="mt-2">
+            <a href="/#courses">Kurslar</a>
+          </li>
+          <li className="mt-2">
+            <a href="/#3">Bitiruvchilar</a>
+          </li>
+          <li className="mt-2">
+            <a href="/#contact">Aloqa</a>
+          </li>
+        </ul>
 
-      <ul className="w-full max-md:w-full mt-12 max-md:mt-8">
-        <h1 className="text-2xl font-semibold">Yo'nalishlar</h1>
-        <li className="mt-6">
-          <Link href={"/foundation"}>Foundation</Link>
-        </li>
-        <li className="mt-2">
-          <Link href={"/kids"}>Foundation Kids</Link>
-        </li>
-        <li className="mt-2">
-          <Link href={"/grafik-dizayn"}>Grafik Dizayn</Link>
-        </li>
-        <li className="mt-2">
-          <Link href={"/frontend"}>Web Frontend</Link>
-        </li>
-        <li className="mt-2">
-          <Link href={"/backend"}>Web Backend</Link>
-        </li>
-        <li className="mt-2">
-          <Link href={"/python"}>Phyton</Link>
-        </li>
-        <li className="mt-2">
-          <Link href={"/ai"}>AI, Su'niy Intellekt</Link>
-        </li>
-      </ul>
+        <ul className="w-full max-md:w-full mt-12 max-md:mt-0">
+          <h1 className="text-2xl font-semibold">Yo'nalishlar</h1>
+          <li className="mt-6">
+            <Link href={"/foundation"}>Foundation</Link>
+          </li>
+          <li className="mt-2">
+            <Link href={"/kids"}>Foundation Kids</Link>
+          </li>
+          <li className="mt-2">
+            <Link href={"/grafik-dizayn"}>Grafik Dizayn</Link>
+          </li>
+          <li className="mt-2">
+            <Link href={"/frontend"}>Web Frontend</Link>
+          </li>
+          <li className="mt-2">
+            <Link href={"/backend"}>Web Backend</Link>
+          </li>
+          <li className="mt-2">
+            <Link href={"/python"}>Phyton</Link>
+          </li>
+          <li className="mt-2">
+            <Link href={"/ai"}>AI, Su'niy Intellekt</Link>
+          </li>
+        </ul>
+      </div>
 
       <ul className="w-full max-md:w-full mt-12 max-md:mt-8">
         <li>
