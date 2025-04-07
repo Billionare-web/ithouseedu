@@ -19,6 +19,9 @@ import Canva from "@/app/components/imgs/canva.png";
 import Footer from "../components/footer";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import Navbar from "../navbar";
+import { collection, getDocs } from "firebase/firestore";
+import { log } from "console";
+import { db } from "../firebase";
 
 function Page() {
   const [name, setName] = useState("");
@@ -45,7 +48,19 @@ function Page() {
     // Saytni yangilash
     window.location.reload(); // Sahifani yangilash
   };
+  const getDoc = async (path: string) => {
 
+    const collectionRef = collection(db, path)
+    const querySnapshot = await getDocs(collectionRef)
+    const data = querySnapshot.docs.map((doc) => ({
+      ...doc.data(),
+      id: doc.id,
+    }));
+    return data;
+  }
+useEffect(()=>{
+  console.log(getDoc())
+}, [])  
   return (
     <div>
       <Navbar />
