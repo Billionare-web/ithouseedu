@@ -20,12 +20,37 @@ import Footer from "../components/footer";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import Navbar from "../navbar";
 import { collection, getDocs } from "firebase/firestore";
-import { log } from "console";
 import { db } from "../firebase";
+import { log } from "node:console";
+
+
+interface UrlData {
+  id: string;
+  url: string;
+  [key: string]: any; 
+}
+
+const getDoc = async (): Promise<UrlData[]> => {
+  try {
+    const collectionRef =  collection(db, 'url');
+    const querySnapshot = await getDocs(collectionRef);
+    const data =  querySnapshot.docs.map((doc) => ({
+      ...doc.data(),
+      id: doc.id,
+    })) as UrlData[];
+
+    return data;
+  } catch (error) {
+    console.log(error);
+    return []; 
+  }
+};
 
 function Page() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [data, setData] = useState<UrlData[]>([]);
+console.log(data);
 
   useEffect(() => {
     AOS.init({
@@ -48,19 +73,16 @@ function Page() {
     // Saytni yangilash
     window.location.reload(); // Sahifani yangilash
   };
-  const getDoc = async (path: string) => {
 
-    const collectionRef = collection(db, path)
-    const querySnapshot = await getDocs(collectionRef)
-    const data = querySnapshot.docs.map((doc) => ({
-      ...doc.data(),
-      id: doc.id,
-    }));
-    return data;
-  }
-useEffect(()=>{
-  console.log(getDoc())
-}, [])  
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await getDoc(); 
+      setData(result); 
+    };
+
+    fetchData();
+  }, []);
+  
   return (
     <div>
       <Navbar />
@@ -85,7 +107,8 @@ useEffect(()=>{
             </h1>
             <div className="flex items-center gap-5 mt-14">
               <h1 className="flex items-center gap-2">
-                <Image className="w-7 h-7" src={Word} alt="" />
+                <Image className="w-7 h-7" width={50} height={50}  src={data[45].word2} alt="word_image" />
+
                 <span className="max-md:hidden">Word</span>
               </h1>
               <h1 className="flex items-center gap-2">
