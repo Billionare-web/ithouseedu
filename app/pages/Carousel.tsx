@@ -47,36 +47,60 @@ import Logo from "@/app/components/imgs/logo.png";
 
 const items = [
   {
-    text: "Web Frontend ni o‘rganing va web saytlarning dizaynini kashf qiling!",
+    title: "Web Frontend",
+    text: "ni o‘rganing va web saytlarning dizaynini kashf qiling!",
     img: Front,
+    width: 500, // Kattalikni qo'shish
+    height: 400, // Kattalikni qo'shish
   },
   {
-    text: "Web Backend ni o‘rganing va web saytlarning ichki qismlari bilan ishlang!",
+    title: "Web Backend",
+    text: "ni o‘rganing va web saytlarning ichki qismlari bilan ishlang!",
     img: Back,
+    width: 400, // Kattalikni qo'shish
+    height: 300, // Kattalikni qo'shish
   },
   {
-    text: "AI ni o‘rganing va sun'iy intellekt bilan yangi imkoniyatlarni kashf qiling!",
+    title: "AI",
+    text: "ni o‘rganing va sun'iy intellekt bilan yangi imkoniyatlarni kashf qiling!",
     img: AI,
+    width: 350, // Kattalikni qo'shish
+    height: 250, // Kattalikni qo'shish
   },
   {
-    text: "Grafik dizaynerlik ni biz bilan o‘rganing va dizayn sohasida yangi ufqlarga yo‘l oching!",
+    title: "Grafik Dizaynerlik",
+    text: "ni biz bilan o‘rganing va dizayn sohasida yangi ufqlarga yo‘l oching!",
     img: Grafik,
+    width: 450, // Kattalikni qo'shish
+    height: 350, // Kattalikni qo'shish
   },
   {
-    text: "Kiberxavfsizlik ni o‘rganing va xavfsizlik imkoniyatlarini kashf qiling!",
+    title: "Kiberxavfsizlik",
+    text: "ni o‘rganing va xavfsizlik imkoniyatlarini kashf qiling!",
     img: Kyber,
+    width: 450, // Kattalikni qo'shish
+    height: 350, // Kattalikni qo'shish
   },
   {
-    text: "Foundation ni o‘rganing va kompyuterning asosini bilib oling!",
+    title: "Foundation",
+    text: "ni o‘rganing va kompyuterning asosini bilib oling!",
     img: Found,
+    width: 550, // Kattalikni qo'shish
+    height: 450, // Kattalikni qo'shish
   },
   {
-    text: "SMM ni biz bilan o‘rganing va brendingizni rivojlantiring!",
+    title: "SMM",
+    text: "ni biz bilan o‘rganing va brendingizni rivojlantiring!",
     img: SMM,
+    width: 500, // Kattalikni qo'shish
+    height: 300, // Kattalikni qo'shish
   },
   {
-    text: "Interyer dizayn ni biz bilan o‘rganing – kelajagingiz uchun qadam bosing!",
+    title: "Interyer Dizayn",
+    text: "ni biz bilan o‘rganing – kelajagingiz uchun qadam bosing!",
     img: Inter,
+    width: 500, // Kattalikni qo'shish
+    height: 400, // Kattalikni qo'shish
   },
 ];
 
@@ -210,39 +234,45 @@ export default function Card() {
   return (
     <div>
       <div className="pt-32 mx-56 max-md:mx-5">
-        <Carousel className="h-[500px]">
-          <CarouselContent className="max-md:flex-col max-md:gap-5">
+        <Carousel className="h-[550px]">
+          <CarouselContent className="max-md:flex-col max-md:gap-5 h-full">
             {items.map((item, index) => (
               <CarouselItem
                 key={index}
                 className={`basis-full ${
                   index === currentIndex ? "block" : "hidden"
-                }`}
+                } h-full`}
               >
-                <div className="w-full flex items-center justify-between flex-row-reverse">
+                <div className="w-full h-full flex justify-between flex-row-reverse relative">
                   <Image
                     src={item.img}
                     alt="Kurs rasmi"
-                    width={400}
-                    height={350}
+                    width={item.width} // Dinamik kattalik
+                    height={item.height} // Dinamik kattalik
                     className="rounded-lg max-md:hidden"
                   />
+
                   <div className="flex-col gap-9">
-                    <h1 className="text-5xl font-bold mb-3 max-md:text-3xl">
+                    <h1 className="text-5xl font-bold mb-3 max-md:text-3xl w-lg leading-14">
+                      <span className="bg-red-600 text-white bg-red px-2 py-1 rounded-2xl">
+                        {item.title}
+                      </span>
                       {item.text}
                     </h1>
-                    <a
-                      href="#courses"
-                      className="bg-red-600 px-14 py-3 text-white font-bold rounded-lg text-xl mt-56 max-md:hidden"
-                    >
-                      Batafsil
-                    </a>
                   </div>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
+
+          {/* Batafsil tugmasi carouseldan tashqarida turadi */}
         </Carousel>
+        <a
+          href="#courses"
+          className="bg-red-600 px-14 py-3 text-white font-bold rounded-lg text-xl absolute bottom-40 shadow-2xl"
+        >
+          Batafsil
+        </a>
 
         <h1 className="text-center text-4xl font-bold mt-12 max-md:flex-none">
           IT HOUSE qanday ishlaydi?
@@ -293,25 +323,23 @@ export default function Card() {
         </div>
 
         <div className="flex flex-col md:flex-row px-4 md:mx-6 gap-6 justify-center mt-16 md:mt-32">
-          <div className="shadow-2xl px-6 py-5 rounded-2xl w-full max-w-xs mx-auto">
-            <h1 className="text-center">Umumiy o'quvchilar soni</h1>
+          <div className="shadow-2xl px-6 py-5 rounded-2xl w-full max-w-xs mx-auto h-36">
+            <h1 className="text-center mt-6">Umumiy o'quvchilar soni</h1>
             <Counter target={6453} />
           </div>
-          <div className="shadow-2xl px-6 py-5 rounded-2xl w-full max-w-xs mx-auto">
-            <h1 className="text-center">Yozilgan darslar soni</h1>
+          <div className="shadow-2xl px-6 py-5 rounded-2xl w-full max-w-xs mx-auto h-36">
+            <h1 className="text-center mt-6">Yozilgan darslar soni</h1>
             <Counter target={245} />
           </div>
-          <div className="shadow-2xl px-6 py-5 rounded-2xl w-full max-w-xs mx-auto">
-            <h1 className="text-center">O'rtacha jamoaviy tajriba</h1>
+          <div className="shadow-2xl px-6 py-5 rounded-2xl w-full max-w-xs mx-auto h-36">
+            <h1 className="text-center mt-6">O'rtacha jamoaviy tajriba</h1>
             <Counter target={5} suffix=" yil" />
           </div>
         </div>
 
         <div id="mentors" className="mt-12 mb-12 bg-white w-full h-12"></div>
         <div className="w-full flex flex-col items-center max-md:hidden">
-          <h1 className="text-4xl font-bold">
-            Bizning Jamoa
-          </h1>
+          <h1 className="text-4xl font-bold">Bizning Jamoa</h1>
           <div className="">
             <Slider {...settings}>
               <div className="flex items-center gap-5 max-lg:flex-col max-lg:px-4">
@@ -582,7 +610,6 @@ export default function Card() {
           <span className="text-red-600">IT HOUSE</span> - KELAJAK SHU YERDA
         </h1>
       </div>
-
       <div
         id="contact"
         className="mt-16 bg-red-600 flex items-center justify-between pt-32 pb-20 px-8 max-md:flex-col"
