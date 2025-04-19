@@ -253,7 +253,7 @@ export default function Card() {
                   />
 
                   <div className="flex-col gap-9">
-                    <h1 className="text-5xl font-bold mb-3 max-md:text-3xl w-lg leading-14">
+                    <h1 className="text-5xl font-bold leading-14 max-md:text-3xl">
                       <span className="bg-red-600 text-white bg-red px-2 py-1 rounded-2xl">
                         {item.title}
                       </span>
@@ -269,7 +269,7 @@ export default function Card() {
         </Carousel>
         <a
           href="#courses"
-          className="bg-red-600 px-14 py-3 text-white font-bold rounded-lg text-xl absolute bottom-40 shadow-2xl"
+          className="bg-red-600 px-14 py-3 text-white font-bold rounded-lg text-xl absolute bottom-40 shadow-2xl max-md:hidden"
         >
           Batafsil
         </a>
