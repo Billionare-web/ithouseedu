@@ -4,7 +4,6 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/app/components/ui/carousel";
-import Slider from "react-slick";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Front from "@/app/components/imgs/front-3.png";
@@ -23,18 +22,6 @@ import Inter from "@/app/components/imgs/Interior-design-3.png";
 import Choise from "@/app/components/imgs/choice.png";
 import Study from "@/app/components/imgs/study.png";
 import Certik from "@/app/components/imgs/certik.png";
-import Temurbek from "@/app/components/imgs/temurbek.png";
-import Nodirbek from "@/app/components/imgs/Nodirbek.png";
-import Jaloliddin from "@/app/components/imgs/Jaloliddin.png";
-import Hikmatillo from "@/app/components/imgs/Hikmattilo.png";
-import Mahmudjon from "@/app/components/imgs/Mahmud.png";
-import Abror from "@/app/components/imgs/Abror.png";
-import Sevara from "@/app/components/imgs/Sevara.png";
-import Xumoyun from "@/app/components/imgs/Xumoyun.png";
-import Jonibek from "@/app/components/imgs/Jonibek.png";
-import Zuxra from "@/app/components/imgs/Zuxra.png";
-import Laylo from "@/app/components/imgs/Laylo.png";
-import Nigina from "@/app/components/imgs/Nigina.png";
 import Counter from "@/app/components/ui/counter";
 import { PiCursorFill } from "react-icons/pi";
 import TypePerson from "@/app/components/imgs/typeperson.png";
@@ -44,6 +31,7 @@ import Coins from "@/app/components/imgs/coins.png";
 import Tasks from "@/app/components/imgs/task.png";
 import Certificate from "@/app/components/imgs/certifikate.png";
 import Logo from "@/app/components/imgs/logo.png";
+import Teachers from "@/app/pages/teachers";
 
 const items = [
   {
@@ -215,15 +203,6 @@ export default function Card() {
   const [hovered, setHovered] = useState<number | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const settings = {
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 2,
-    speed: 500,
-  };
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
@@ -341,134 +320,7 @@ export default function Card() {
         <div className="w-full flex flex-col items-center max-md:hidden">
           <h1 className="text-4xl font-bold">Bizning Jamoa</h1>
           <div className="">
-            <Slider {...settings}>
-              <div className="flex items-center gap-5 max-lg:flex-col max-lg:px-4">
-                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
-                  <Image
-                    className="rounded-2xl w-28 h-28 mx-auto"
-                    src={Temurbek}
-                    alt=""
-                  />
-                  <h1 className="font-bold text-xl text-center">
-                    Temurbek Yorkulov
-                  </h1>
-                  <h1 className="text-sm text-center">Kiberxavfsizlik</h1>
-                </div>
-                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
-                  <Image
-                    className="rounded-2xl w-28 h-28 mx-auto"
-                    src={Nodirbek}
-                    alt=""
-                  />
-                  <h1 className="font-bold text-xl text-center">
-                    Nodirbek Kuchkarov
-                  </h1>
-                  <h1 className="text-sm text-center">AI, Foundation Kids</h1>
-                </div>
-                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
-                  <Image
-                    className="rounded-2xl w-28 h-28 mx-auto"
-                    src={Jaloliddin}
-                    alt=""
-                  />
-                  <h1 className="font-bold text-xl text-center">
-                    Jaloliddin Abdurahmonov
-                  </h1>
-                  <h1 className="text-sm text-center">Web Dasturlash</h1>
-                </div>
-                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
-                  <Image
-                    className="rounded-2xl w-28 h-28 mx-auto"
-                    src={Hikmatillo}
-                    alt=""
-                  />
-                  <h1 className="font-bold text-xl text-center">
-                    Hikmatillo Bobomurodov
-                  </h1>
-                  <h1 className="text-sm text-center">Matematika</h1>
-                </div>
-                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
-                  <Image
-                    className="rounded-2xl w-28 h-28 mx-auto"
-                    src={Mahmudjon}
-                    alt=""
-                  />
-                  <h1 className="font-bold text-xl text-center">
-                    Mahmudjon Naimjonov
-                  </h1>
-                  <h1 className="text-sm text-center">Foundation</h1>
-                </div>
-                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
-                  <Image
-                    className="rounded-2xl w-28 h-28 mx-auto"
-                    src={Abror}
-                    alt=""
-                  />
-                  <h1 className="font-bold text-xl text-center">
-                    Abror Narziqulov
-                  </h1>
-                  <h1 className="text-sm text-center">Grafik Dizayn</h1>
-                </div>
-                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
-                  <Image
-                    className="rounded-2xl w-28 h-28 mx-auto"
-                    src={Sevara}
-                    alt=""
-                  />
-                  <h1 className="font-bold text-xl text-center">
-                    Sevara Jo'rayeva
-                  </h1>
-                  <h1 className="text-sm text-center">Ingliz Tili</h1>
-                </div>
-                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
-                  <Image
-                    className="rounded-2xl w-28 h-28 mx-auto"
-                    src={Xumoyun}
-                    alt=""
-                  />
-                  <h1 className="font-bold text-xl text-center">Xumoyun</h1>
-                  <h1 className="text-sm text-center">Phython</h1>
-                </div>
-                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
-                  <Image
-                    className="rounded-2xl w-28 h-28 mx-auto"
-                    src={Jonibek}
-                    alt=""
-                  />
-                  <h1 className="font-bold text-xl text-center">
-                    Jonibek To'rapov
-                  </h1>
-                  <h1 className="text-sm text-center">Web Dasturlash</h1>
-                </div>
-                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
-                  <Image
-                    className="rounded-2xl w-28 h-28 mx-auto"
-                    src={Zuxra}
-                    alt=""
-                  />
-                  <h1 className="font-bold text-xl text-center">Zuxra</h1>
-                  <h1 className="text-sm text-center">Rus Tili</h1>
-                </div>
-                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
-                  <Image
-                    className="rounded-2xl w-28 h-28 mx-auto"
-                    src={Laylo}
-                    alt=""
-                  />
-                  <h1 className="font-bold text-xl text-center">Laylo</h1>
-                  <h1 className="text-sm text-center">Call Center</h1>
-                </div>
-                <div className="px-4 py-6 bg-white shadow w-full max-w-[300px] mx-auto">
-                  <Image
-                    className="rounded-2xl w-28 h-28 mx-auto"
-                    src={Nigina}
-                    alt=""
-                  />
-                  <h1 className="font-bold text-xl text-center">Nigina</h1>
-                  <h1 className="text-sm text-center">Call Center</h1>
-                </div>
-              </div>
-            </Slider>
+            <Teachers />
           </div>
         </div>
 
@@ -593,17 +445,14 @@ export default function Card() {
           "IT HOUSE" o'quv markazi bitiruvchilari
         </h1>
         <div className="flex justify-center items-center mt-10 max-md:hidden">
-          <video
-            className="max-md:w-full max-md:mx-7 max-md:h-[250px]"
-            width="800"
-            height="450"
-            controls
-          >
-            <source
-              src="https://www.youtube.com/watch?v=TBlDJTgiFZU"
-              type="video/mp4"
-            />
-          </video>
+          <iframe
+            width="645"
+            height="400"
+            src="https://www.youtube.com/embed/TBlDJTgiFZU"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
 
         <h1 className="text-4xl font-bold text-center mt-16 max-md:hidden">
