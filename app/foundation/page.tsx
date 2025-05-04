@@ -21,8 +21,6 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 import Navbar from "../navbar";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
-import { log } from "node:console";
-
 
 interface UrlData {
   id: string;
@@ -107,7 +105,7 @@ console.log(data);
             </h1>
             <div className="flex items-center gap-5 mt-14">
               <h1 className="flex items-center gap-2">
-                <Image className="w-7 h-7" width={50} height={50}  src={data[45].word2} alt="word_image" />
+                <Image className="w-7 h-7" width={50} height={50}  src={Word} alt="word_image" />
 
                 <span className="max-md:hidden">Word</span>
               </h1>
