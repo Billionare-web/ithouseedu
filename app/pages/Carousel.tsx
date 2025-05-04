@@ -29,8 +29,8 @@ import Cap from "@/app/components/imgs/cap.png";
 import Prize from "@/app/components/imgs/prize.png";
 import Coins from "@/app/components/imgs/coins.png";
 import Tasks from "@/app/components/imgs/task.png";
+import Contact from "../contact/page"
 import Certificate from "@/app/components/imgs/certifikate.png";
-import Logo from "@/app/components/imgs/logo.png";
 import Teachers from "@/app/pages/teachers";
 
 const items = [
@@ -459,48 +459,7 @@ export default function Card() {
           <span className="text-red-600">IT HOUSE</span> - KELAJAK SHU YERDA
         </h1>
       </div>
-      <div
-        id="contact"
-        className="mt-16 bg-red-600 flex items-center justify-between pt-32 pb-20 px-8 max-md:flex-col"
-      >
-        <h1 className="text-4xl font-bold text-white max-md:hidden">
-          Kurslar haqida to'liq ma'lumotga <br />
-          ega bo'lishni istasangiz <br />
-          formani to'ldiring
-        </h1>
-        <div className="bg-white rounded-2xl px-4 py-5 w-96 max-md:w-full max-md:px-6">
-          <div className="flex items-center gap-2 ml-5">
-            <Image className="w-12 h-12" src={Logo} alt="" />
-            <h1 className="font-bold text-2xl">IT HOUSE</h1>
-          </div>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              location.reload();
-            }}
-          >
-            <input
-              className="w-full outline-none mt-7 border-b-2 border-b-black"
-              type="text"
-              placeholder="Ism"
-              required
-            />
-            <br />
-            <input
-              className="w-full outline-none mt-5 border-b-2 border-b-black"
-              type="number"
-              placeholder="Telefon raqam"
-              required
-            />
-            <button
-              type="submit"
-              className="bg-gray-500 w-48 h-14 px-7 py-1 rounded-xl text-lg font-bold text-white mt-20 mx-20 mb-12 max-md:w-full max-md:mx-0"
-            >
-              Yuborish
-            </button>
-          </form>
-        </div>
-      </div>
+      <Contact />
     </div>
   );
 }
