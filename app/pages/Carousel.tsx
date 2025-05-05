@@ -29,11 +29,11 @@ import Cap from "@/app/components/imgs/cap.png";
 import Prize from "@/app/components/imgs/prize.png";
 import Coins from "@/app/components/imgs/coins.png";
 import Tasks from "@/app/components/imgs/task.png";
-import Contact from "../contact/page"
+import Contact from "../contact/page";
 import Certificate from "@/app/components/imgs/certifikate.png";
 import Teachers from "@/app/pages/teachers";
 
-const items = [
+const items = [   
   {
     title: "Web Frontend",
     text: "ni o‘rganing va web saytlarning dizaynini kashf qiling!",
@@ -211,10 +211,10 @@ export default function Card() {
   }, []);
 
   return (
-    <div>
-      <div className="pt-32 mx-56 max-md:mx-5">
-        <Carousel className="h-[550px]">
-          <CarouselContent className="max-md:flex-col max-md:gap-5 h-full">
+    <div className="bg-gray-100">
+      <div className="pt-32 px-5 sm:px-10 md:px-20 lg:px-56">
+        <Carousel className="h-auto">
+          <CarouselContent className="flex flex-col md:flex-row gap-5 h-full">
             {items.map((item, index) => (
               <CarouselItem
                 key={index}
@@ -226,11 +226,10 @@ export default function Card() {
                   <Image
                     src={item.img}
                     alt="Kurs rasmi"
-                    width={item.width} // Dinamik kattalik
-                    height={item.height} // Dinamik kattalik
-                    className="rounded-lg max-md:hidden"
+                    width={item.width}
+                    height={item.height}
+                    className="rounded-lg hidden md:block w-full h-auto"
                   />
-
                   <div className="flex-col gap-9">
                     <h1 className="text-5xl font-bold leading-14 max-md:text-3xl">
                       <span className="bg-red-600 text-white bg-red px-2 py-1 rounded-2xl">
@@ -248,7 +247,7 @@ export default function Card() {
         </Carousel>
         <a
           href="#courses"
-          className="bg-red-600 px-14 py-3 text-white font-bold rounded-lg text-xl absolute bottom-40 shadow-2xl max-md:hidden"
+          className="bg-red-600 px-10 py-3 text-white font-bold rounded-lg text-xl shadow-2xl block text-center mx-auto mt-8 md:absolute md:bottom-40 md:right-20"
         >
           Batafsil
         </a>
@@ -280,7 +279,7 @@ export default function Card() {
           ].map((item) => (
             <div
               key={item.id}
-              className="shadow-2xl rounded-2xl mx-4 py-6 w-full h-[450px] flex flex-col justify-between"
+              className="bg-gray-100 shadow-2xl rounded-4xl mx-4 py-6 w-full h-[450px] flex flex-col justify-between"
             >
               <div className="flex gap-4 items-center px-6">
                 <h1 className="bg-red-600 rounded-full w-10 h-10 text-white text-center px-3 py-2 font-bold">
@@ -302,21 +301,21 @@ export default function Card() {
         </div>
 
         <div className="flex flex-col md:flex-row px-4 md:mx-6 gap-6 justify-center mt-16 md:mt-32">
-          <div className="shadow-2xl px-6 py-5 rounded-2xl w-full max-w-xs mx-auto h-36">
+          <div className="shadow-2xl px-6 py-5 rounded-4xl w-full max-w-xs mx-auto h-36">
             <h1 className="text-center mt-6">Umumiy o'quvchilar soni</h1>
             <Counter target={6453} />
           </div>
-          <div className="shadow-2xl px-6 py-5 rounded-2xl w-full max-w-xs mx-auto h-36">
+          <div className="shadow-2xl px-6 py-5 rounded-4xl w-full max-w-xs mx-auto h-36">
             <h1 className="text-center mt-6">Yozilgan darslar soni</h1>
             <Counter target={245} />
           </div>
-          <div className="shadow-2xl px-6 py-5 rounded-2xl w-full max-w-xs mx-auto h-36">
+          <div className="shadow-2xl px-6 py-5 rounded-4xl w-full max-w-xs mx-auto h-36">
             <h1 className="text-center mt-6">O'rtacha jamoaviy tajriba</h1>
             <Counter target={5} suffix=" yil" />
           </div>
         </div>
 
-        <div id="mentors" className="mt-12 mb-12 bg-white w-full h-12"></div>
+        <div id="mentors" className="mt-12 mb-12 bg-gray-100 w-full h-12"></div>
         <div className="w-full flex flex-col items-center max-md:hidden">
           <h1 className="text-4xl font-bold">Bizning Jamoa</h1>
           <div className="">
@@ -324,13 +323,13 @@ export default function Card() {
           </div>
         </div>
 
-        <div id="courses" className="mt-12 mb-12 bg-white w-full h-12"></div>
+        <div id="courses" className="mt-12 mb-12 bg-gray-100 w-full h-12"></div>
         <h1 className="text-4xl font-bold">Kurslar</h1>
-        <div className="grid grid-cols-3 gap-7 mt-7 max-md:grid-cols-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 mt-7">
           {courses.map((course) => (
             <div
               key={course.id}
-              className="relative shadow-2xl rounded-2xl px-6 py-3 hover:shadow-xl transition-all"
+              className="bg-white relative shadow-2xl rounded-2xl px-6 py-3 hover:shadow-xl transition-all"
               onMouseEnter={() => setHovered(course.id)}
               onMouseLeave={() => setHovered(null)}
             >
@@ -362,7 +361,7 @@ export default function Card() {
           Nima uchun "IT HOUSE" da o'qish kerak?
         </h1>
         <div className="flex items-center justify-between mt-9 gap-3 max-md:flex-col max-md:mt-32">
-          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
+          <div className="bg-white shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
               src={TypePerson}
@@ -373,7 +372,7 @@ export default function Card() {
               24/7 formatida tun-u kun ishlaydigan bepul coworking va wifi.
             </h1>
           </div>
-          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
+          <div className="bg-white shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
               src={Cap}
@@ -387,7 +386,7 @@ export default function Card() {
           </div>
         </div>
         <div className="flex items-center justify-between mt-6 gap-3 max-md:flex-col">
-          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
+          <div className="bg-white shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
               src={Prize}
@@ -399,7 +398,7 @@ export default function Card() {
               musobaqalar.
             </h1>
           </div>
-          <div className="shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
+          <div className="bg-white shadow-2xl w-[520px] h-40 pl-6 pr-10 pt-4 pb-10 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
               src={Coins}
@@ -412,7 +411,7 @@ export default function Card() {
           </div>
         </div>
         <div className="flex items-center justify-between mt-6 gap-3 max-md:flex-col">
-          <div className="shadow-2xl w-[520px] h-40 max-md:h-full pl-6 pr-10 pt-4 pb-10 max-md:pb-3 rounded-2xl max-md:w-full">
+          <div className="bg-white shadow-2xl w-[520px] h-40 max-md:h-full pl-6 pr-10 pt-4 pb-10 max-md:pb-3 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
               src={Tasks}
@@ -424,7 +423,7 @@ export default function Card() {
               o‘quvchilarga amaliyot taklif qilish kafolatini beradi.
             </h1>
           </div>
-          <div className="shadow-2xl w-[520px] h-40 max-md:h-full pl-6 pr-10 pt-4 pb-10 max-md:pb-3 rounded-2xl max-md:w-full">
+          <div className="bg-white shadow-2xl w-[520px] h-40 max-md:h-full pl-6 pr-10 pt-4 pb-10 max-md:pb-3 rounded-2xl max-md:w-full">
             <Image
               className="w-12 h-12 bg-white rounded-full"
               src={Certificate}
