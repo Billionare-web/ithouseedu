@@ -11,7 +11,7 @@ import { IoLocationSharp } from "react-icons/io5";
 
 function Footer() {
   return (
-    <div className="zpx-44 max-md:px-6 flex justify-between pt-20">
+    <div className="px-44 max-md:px-6 flex justify-between pt-20 text-wrap">
       <div className="flex max-md:flex-col max-md:gap-16">
         <ul className="w-full max-md:w-full">
           <h1 className="text-2xl font-semibold">Ma'lumotlar</h1>

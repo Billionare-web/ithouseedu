@@ -213,7 +213,7 @@ export default function Card() {
   return (
     <div className="bg-gray-100">
       <div className="pt-32 px-5 sm:px-10 md:px-20 lg:px-56">
-        <Carousel className="h-auto">
+        <Carousel className="h-[550px]">
           <CarouselContent className="flex flex-col md:flex-row gap-5 h-full">
             {items.map((item, index) => (
               <CarouselItem
@@ -247,7 +247,7 @@ export default function Card() {
         </Carousel>
         <a
           href="#courses"
-          className="bg-red-600 px-10 py-3 text-white font-bold rounded-lg text-xl shadow-2xl block text-center mx-auto mt-8 md:absolute md:bottom-40 md:right-20"
+          className="bg-red-600 px-10 py-3 text-white font-bold w-44 rounded-lg text-xl shadow-2xl block text-center -mt-16 md:bottom-40 md:right-20"
         >
           Batafsil
         </a>
@@ -301,7 +301,7 @@ export default function Card() {
         </div>
 
         <div className="flex flex-col md:flex-row px-4 md:mx-6 gap-6 justify-center mt-16 md:mt-32">
-          <div className="shadow-2xl px-6 py-5 rounded-4xl w-full max-w-xs mx-auto h-36">
+          <div className="shadow-2xl px-6 py-5 rounded-4xl w-full max-w-xs mx-auto h-36 duration-1000">
             <h1 className="text-center mt-6">Umumiy o'quvchilar soni</h1>
             <Counter target={6453} />
           </div>
