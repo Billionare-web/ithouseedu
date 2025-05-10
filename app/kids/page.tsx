@@ -7,15 +7,13 @@ import { FaCheck } from "react-icons/fa6";
 import FoundKids from "@/app/components/imgs/Foundkids.png";
 import MS from "@/app/components/imgs/ms.png";
 import Nodirbek from "@/app/components/imgs/Nodirbek.png";
-import Girl from "@/app/components/imgs/girl.png";
-import Boy from "@/app/components/imgs/Boy.png";
-import Women from "@/app/components/imgs/Women.png";
 import Navbar from "../navbar";
 import Contact from "../contact/page";
 import Finishes from "../finishes/page";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import Footer from "../components/footer";
 import Levels from "./levels";
+import Course from "./course";
 
 function Kids() {
   useEffect(() => {
@@ -234,95 +232,7 @@ function Kids() {
           </div>
         </div>
         <Levels />
-        <div className="px-64 mt-10 max-md:px-5">
-          <h1 className="text-4xl font-bold">
-            Ushbu kurs kimlarga to'g'ri keladi
-          </h1>
-          <h1 className="mt-8">
-            Biz Grafik Dizaynerlikni shu narsalarni istagan o'quvchilar uchun
-            qildik
-          </h1>
-          <div className="flex justify-between mt-7 gap-5 max-md:flex-col">
-            <div
-              data-aos="zoom-in"
-              data-aos-duration="1000"
-              className="bg-gray-300 rounded-2xl px-3 py-8 w-full"
-            >
-              <Image className="rounded-full w-24 h-24" src={Girl} alt="" />
-              <h1 className="text-xl font-bold mt-4">
-                Kasbni noldan boshlab o'rganish
-              </h1>
-              <h1 className="flex mt-6 gap-2">
-                <FaCheck />
-                Boshlash uchun maxsus bilim <br />
-                talab etilmaydi
-              </h1>
-              <h1 className="flex mt-6 gap-2">
-                <FaCheck />
-                Amaliy ko'nikmalarga ega <br />
-                bo'lasiz
-              </h1>
-              <h1 className="flex mt-6 pb-12 gap-2">
-                <FaCheck />
-                Kelajakda ish topishga yordam <br />
-                beradigan jozibali <br />
-                portfolioingizni to'plang
-              </h1>
-            </div>
-            <div
-              data-aos="zoom-in"
-              data-aos-duration="1000"
-              className="bg-gray-300 rounded-2xl px-3 py-8 w-full"
-            >
-              <Image className="rounded-full w-24 h-24" src={Boy} alt="" />
-              <h1 className="text-xl font-bold mt-4">
-                Bilimlarni tizimlashtirish va kompyuter savodxonligini o'z
-                kasbingiz qiling
-              </h1>
-              <h1 className="flex mt-6 gap-2">
-                <FaCheck />
-                Asosiy bilimlaringizni <br />
-                chuqurlashtiring
-              </h1>
-              <h1 className="flex mt-6 gap-2">
-                <FaCheck />
-                Kompyuterda har tomonlama <br />
-                bilimlaringizni kuchaytiring
-              </h1>
-              <h1 className="flex mt-6 pb-12 gap-2">
-                <FaCheck />
-                Portfolioingizni yangi keyslar <br />
-                bilan to'ldiring
-              </h1>
-            </div>
-            <div
-              data-aos="zoom-in"
-              data-aos-duration="1000"
-              className="bg-gray-300 rounded-2xl px-3 py-8 w-full"
-            >
-              <Image className="rounded-full w-24 h-24" src={Women} alt="" />
-              <h1 className="text-xl font-bold mt-4">
-                Marketolog, muharrir va boshqa <br />
-                kasblar uchun qo'shimcha oling
-              </h1>
-              <h1 className="flex mt-6 gap-2">
-                <FaCheck />
-                Siz biznes vazifalari hal qila <br />
-                olasiz
-              </h1>
-              <h1 className="flex mt-6 gap-2">
-                <FaCheck />
-                Ko'proq daromad olasiz
-              </h1>
-              <h1 className="flex mt-6 pb-12 gap-2">
-                <FaCheck />
-                Boshqa hamkasblarga <br />
-                qaraganda qo'shimcha bilimga <br />
-                ega bo'ling
-              </h1>
-            </div>
-          </div>
-        </div>
+        <Course />
         <Finishes />
         <Contact />
       </div>

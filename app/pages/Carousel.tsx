@@ -251,7 +251,6 @@ export default function Card() {
         >
           Batafsil
         </a>
-
         <h1 className="text-center text-4xl font-bold mt-12 max-md:flex-none">
           IT HOUSE qanday ishlaydi?
         </h1>
